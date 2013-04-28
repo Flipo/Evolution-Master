@@ -1,0 +1,118 @@
+@import "compass/css3";
+@import "susy";
+@import "media-queries";
+@import "bits";
+@import "fonts";
+@import "type";
+
+
+
+@include border-box-sizing;
+
+
+.wrapper {	/* @include susy-grid-background; */}
+
+html {
+	background: $background-color;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	margin: 0;
+}
+
+.main-header {
+	@include container($total-columns, $landscape, $smalltablet, $tablet, $desktop, $bigdesktop)
+}
+
+.full {
+	width: 100%;
+	height: auto;
+	@include clearfix;
+}
+
+.head {
+	background: $alpha-color;
+	padding: 5px 0;
+	margin-bottom: 2em;
+}
+
+.logo {
+	max-width: 200px;
+}
+
+
+.grid-container {
+	@include container($total-columns, $landscape, $smalltablet, $tablet, $desktop, $bigdesktop);
+	/* @include susy-grid-background */;
+}
+
+.box {
+	@include span-columns(2,4);
+	padding-bottom: 2em;
+	position: relative;
+
+	&:nth-child(2n) {
+		margin-right: 0;
+	}
+
+	@include at-breakpoint($smalltablet) {
+		@include span-columns(4,12);
+
+		&:nth-child(2n) {
+			margin-right: 2.12766%;
+		}
+
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+	}
+
+	@include at-breakpoint($bigdesktop) {
+		@include span-columns(3,12);
+
+		&:nth-child(2n) {
+			margin-right: 2.12766%;
+		}
+
+		&:nth-child(3n) {
+			margin-right: 2.12766%;
+		}
+
+
+		&:nth-child(4n) {
+			margin-right: 0;
+		}
+	}
+}
+
+.box img {
+	margin: 0 0 -.25em 0;
+}
+
+.box-heart {
+	position: absolute;
+	right: 35px;
+	margin-top: -3.85em;
+	width: 35px;
+	font-size: .75em;
+	padding-right: 5px;
+	text-align: right;
+
+	i {
+		margin-right: 3px;
+	}
+
+	@include at-breakpoint($smalltablet) {
+		margin-top: -1.825em;
+	}
+
+}
+
+.box-comment {
+	@extend .box-heart;
+	right: 0;
+
+}
+
