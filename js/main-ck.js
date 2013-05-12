@@ -19,4 +19,9 @@ $(function() {
             yearNumberTwo: "y"
         }
     });
+    $("#filter-nav").tinyNav({
+        active: "selected",
+        label: "Jahr:"
+    });
+    Grid.init();
 });

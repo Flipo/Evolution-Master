@@ -7,41 +7,356 @@
 <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Welcome to evolutzer</title>
+    <title>Welcome to evoluzzer</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link rel="stylesheet" href="css/global.css">
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="js/vendor/modernizr.custom.js"></script>
 </head>
 <body>
 	<div class="full head">
 		<header class="main-header">
 			<div class="logo">
 				<img src="img/logo.svg" />
+				<p>Erlebe die Evolution des Webdesign</p>
+			</div>
+			<div class="top-menu">
+				<ul>
+					<li>
+						<a href="#">Anmelden</a>
+					</li>
+					<li>
+						<a href="#">Login</a>
+					</li>
+					<li>
+						<input type="search" placeholder="Suche">
+						<input type="submit" value="">
+					</li>
+				</ul>
+
 			</div>
 		</header>
 	</div>
-<section class="grid-container">
-	<article class="box" data-draft-repeat="20">
-		<img data-draft-image="400/300" />
-		<div>
-			<span data-draft-text="1/w"></span>
-			<div class="box-heart">
-				<i class="icon-heart"></i><span data-draft-number="2"></span>
+	<div class="full filter-bar">
+		<nav class="filter-nav">
+			<div class="year-select">
+				<ul id="filter-nav">
+					<li class="active"><a href="#">1993</a></li>
+					<li><a href="#">1996</a></li>
+					<li><a href="#">2000</a></li>
+					<li><a href="#">2003</a></li>
+					<li><a href="#">2006</a></li>
+					<li><a href="#">2009</a></li>
+					<li><a href="#">2012</a></li>
+					<li><a href="#">2013</a></li>
+				</ul>
 			</div>
-			<div class="box-comment">
-			 	<i class="icon-comment"></i><span data-draft-number="2"></span>
+			<div class="trends-select">
+				<select class="trends-list">
+					<option>Alle Trends</option>
+					<option data-draft-text="1/w" data-draft-repeat="13"></option>
+				</select>
 			</div>
+		</nav>
+	</div>
+			<div class="main">
+				<ul id="og-grid" class="og-grid">
+					<li>
+						<a 	href="http://thomas.do/"
+							data-largesrc="img/1.jpg"
+							data-title="thomas.do"
+							data-year="2012"
+							data-description="Trend: Skeuomorphismus"
+							data-uploader="Hochgeladen von: Max Mustermann">
+							<img src="img/thumbs/1.jpg" alt="img01"/>
+						</a>
+					     <div class="thumb-data">
+							<span>thomas.do</span>
+							<div class="box-heart">
+								<i class="icon-heart"></i><span data-draft-number="2"></span>
+							</div>
+							<div class="box-comment">
+							 	<i class="icon-comment"></i><span data-draft-number="2"></span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a 	href="https://testflightapp.com/"
+							data-largesrc="img/2.jpg"
+							data-title="testflightapp.com"
+							data-year="2012"
+							data-description="Trend: Skeuomorphismus"
+							data-uploader="Hochgeladen von: Max Mustermann">
+							<img src="img/thumbs/2.jpg" alt="img02"/>
+						</a>
+					     <div class="thumb-data">
+							<span>testflightapp.com</span>
+							<div class="box-heart">
+								<i class="icon-heart"></i><span data-draft-number="2"></span>
+							</div>
+							<div class="box-comment">
+							 	<i class="icon-comment"></i><span data-draft-number="2"></span>
+							</div>
+						</div>
+					</li>
+					<li>
+					<a 	href="http://tomorrow.do/"
+							data-largesrc="img/3.jpg"
+							data-title="tomorrow.do"
+							data-year="2012"
+							data-description="Trend: Skeuomorphismus"
+							data-uploader="Hochgeladen von: Max Mustermann">
+							<img src="img/thumbs/3.jpg" alt="img03"/>
+						</a>
+					     <div class="thumb-data">
+							<span>tomorrow.do</span>
+							<div class="box-heart">
+								<i class="icon-heart"></i><span data-draft-number="2"></span>
+							</div>
+							<div class="box-comment">
+							 	<i class="icon-comment"></i><span data-draft-number="2"></span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a 	href="http://www.iconeden.com/blog/"
+							data-largesrc="img/4.jpg"
+							data-title="iconeden.com/blog/"
+							data-year="2012"
+							data-description="Trend: Skeuomorphismus"
+							data-uploader="Hochgeladen von: Max Mustermann">
+							<img src="img/thumbs/4.jpg" alt="img04"/>
+						</a>
+					     <div class="thumb-data">
+							<span>iconeden.com/blog/</span>
+							<div class="box-heart">
+								<i class="icon-heart"></i><span data-draft-number="2"></span>
+							</div>
+							<div class="box-comment">
+							 	<i class="icon-comment"></i><span data-draft-number="2"></span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a 	href="http://sickdesigner.com/"
+							data-largesrc="img/5.jpg"
+							data-title="sickdesigner.com"
+							data-year="2012"
+							data-description="Trend: Skeuomorphismus"
+							data-uploader="Hochgeladen von: Max Mustermann">
+							<img src="img/thumbs/5.jpg" alt="img02"/>
+						</a>
+					     <div class="thumb-data">
+							<span>sickdesigner.com</span>
+							<div class="box-heart">
+								<i class="icon-heart"></i><span data-draft-number="2"></span>
+							</div>
+							<div class="box-comment">
+							 	<i class="icon-comment"></i><span data-draft-number="2"></span>
+							</div>
+						</div>
+					</li>
+					<li>
+					<a 	href="http://www.oatiful.ie/"
+							data-largesrc="img/6.jpg"
+							data-title="oatiful.ie"
+							data-year="2012"
+							data-description="Trend: Skeuomorphismus"
+							data-uploader="Hochgeladen von: Max Mustermann">
+							<img src="img/thumbs/6.jpg" alt="img03"/>
+						</a>
+					     <div class="thumb-data">
+							<span>oatiful.ie</span>
+							<div class="box-heart">
+								<i class="icon-heart"></i><span data-draft-number="2"></span>
+							</div>
+							<div class="box-comment">
+							 	<i class="icon-comment"></i><span data-draft-number="2"></span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a 	href="http://www.bucketlistly.com/"
+							data-largesrc="img/7.jpg"
+							data-title="bucketlistly.com"
+							data-year="2012"
+							data-description="Trend: Skeuomorphismus"
+							data-uploader="Hochgeladen von: Max Mustermann">
+							<img src="img/thumbs/7.jpg" alt="img01"/>
+						</a>
+					     <div class="thumb-data">
+							<span>bucketlistly.com</span>
+							<div class="box-heart">
+								<i class="icon-heart"></i><span data-draft-number="2"></span>
+							</div>
+							<div class="box-comment">
+							 	<i class="icon-comment"></i><span data-draft-number="2"></span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a 	href="http://www.lamaddalena.pl/"
+							data-largesrc="img/8.jpg"
+							data-title="lamaddalena.pl"
+							data-year="2012"
+							data-description="Trend: Skeuomorphismus"
+							data-uploader="Hochgeladen von: Max Mustermann">
+							<img src="img/thumbs/8.jpg" alt="img02"/>
+						</a>
+					     <div class="thumb-data">
+							<span>lamaddalena.pl</span>
+							<div class="box-heart">
+								<i class="icon-heart"></i><span data-draft-number="2"></span>
+							</div>
+							<div class="box-comment">
+							 	<i class="icon-comment"></i><span data-draft-number="2"></span>
+							</div>
+						</div>
+					</li>
+					<li>
+					<a 	href="http://www.gnosh.co.uk/"
+							data-largesrc="img/9.jpg"
+							data-title="gnosh.co.uk"
+							data-year="2012"
+							data-description="Trend: Skeuomorphismus"
+							data-uploader="Hochgeladen von: Max Mustermann">
+							<img src="img/thumbs/9.jpg" alt="img03"/>
+						</a>
+					     <div class="thumb-data">
+							<span>gnosh.co.uk</span>
+							<div class="box-heart">
+								<i class="icon-heart"></i><span data-draft-number="2"></span>
+							</div>
+							<div class="box-comment">
+							 	<i class="icon-comment"></i><span data-draft-number="2"></span>
+							</div>
+						</div>
+					</li>
+<li>
+						<a 	href="http://sickdesigner.com/"
+							data-largesrc="img/5.jpg"
+							data-title="sickdesigner.com"
+							data-year="2012"
+							data-description="Trend: Skeuomorphismus"
+							data-uploader="Hochgeladen von: Max Mustermann">
+							<img src="img/thumbs/5.jpg" alt="img02"/>
+						</a>
+					     <div class="thumb-data">
+							<span>sickdesigner.com</span>
+							<div class="box-heart">
+								<i class="icon-heart"></i><span data-draft-number="2"></span>
+							</div>
+							<div class="box-comment">
+							 	<i class="icon-comment"></i><span data-draft-number="2"></span>
+							</div>
+						</div>
+					</li>
+					<li>
+					<a 	href="http://www.oatiful.ie/"
+							data-largesrc="img/6.jpg"
+							data-title="oatiful.ie"
+							data-year="2012"
+							data-description="Trend: Skeuomorphismus"
+							data-uploader="Hochgeladen von: Max Mustermann">
+							<img src="img/thumbs/6.jpg" alt="img03"/>
+						</a>
+					     <div class="thumb-data">
+							<span>oatiful.ie</span>
+							<div class="box-heart">
+								<i class="icon-heart"></i><span data-draft-number="2"></span>
+							</div>
+							<div class="box-comment">
+							 	<i class="icon-comment"></i><span data-draft-number="2"></span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a 	href="http://www.bucketlistly.com/"
+							data-largesrc="img/7.jpg"
+							data-title="bucketlistly.com"
+							data-year="2012"
+							data-description="Trend: Skeuomorphismus"
+							data-uploader="Hochgeladen von: Max Mustermann">
+							<img src="img/thumbs/7.jpg" alt="img01"/>
+						</a>
+					     <div class="thumb-data">
+							<span>bucketlistly.com</span>
+							<div class="box-heart">
+								<i class="icon-heart"></i><span data-draft-number="2"></span>
+							</div>
+							<div class="box-comment">
+							 	<i class="icon-comment"></i><span data-draft-number="2"></span>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a 	href="http://www.lamaddalena.pl/"
+							data-largesrc="img/8.jpg"
+							data-title="lamaddalena.pl"
+							data-year="2012"
+							data-description="Trend: Skeuomorphismus"
+							data-uploader="Hochgeladen von: Max Mustermann">
+							<img src="img/thumbs/8.jpg" alt="img02"/>
+						</a>
+					     <div class="thumb-data">
+							<span>lamaddalena.pl</span>
+							<div class="box-heart">
+								<i class="icon-heart"></i><span data-draft-number="2"></span>
+							</div>
+							<div class="box-comment">
+							 	<i class="icon-comment"></i><span data-draft-number="2"></span>
+							</div>
+						</div>
+					</li>
+					<li>
+					<a 	href="http://www.gnosh.co.uk/"
+							data-largesrc="img/9.jpg"
+							data-title="gnosh.co.uk"
+							data-year="2012"
+							data-description="Trend: Skeuomorphismus"
+							data-uploader="Hochgeladen von: Max Mustermann">
+							<img src="img/thumbs/9.jpg" alt="img03"/>
+						</a>
+					     <div class="thumb-data">
+							<span>gnosh.co.uk</span>
+							<div class="box-heart">
+								<i class="icon-heart"></i><span data-draft-number="2"></span>
+							</div>
+							<div class="box-comment">
+							 	<i class="icon-comment"></i><span data-draft-number="2"></span>
+							</div>
+						</div>
+					</li>
+
+				</ul>
+			</div>
+
+<div class="full foot">
+	<footer class="main-footer">
+		<div class="footer-row1 row">
+			<ul>
+				<li>Jahr:</li>
+				<li><a href="#">1993</a></li>
+				<li><a href="#">1996</a></li>
+				<li><a href="#">2000</a></li>
+				<li><a href="#">2003</a></li>
+				<li><a href="#">2006</a></li>
+				<li><a href="#">2009</a></li>
+				<li><a href="#">2012</a></li>
+				<li><a href="#">2013</a></li>
+			</ul>
+			<input type="search" placeholder="Suche">
 		</div>
-	</article>
-</section>
+	</footer>
+</div>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 		<script src="js/plugins-ck.js"></script>
+		<script src="js/vendor/grid.js"></script>
 		<script src="js/main-ck.js"></script>
 
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
