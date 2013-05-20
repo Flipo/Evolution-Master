@@ -4,7 +4,12 @@
 	padding: 0 0.625em;
 
 	@include at-breakpoint($smalltablet) {
+		padding: 0 0.625em;
+	}
+
+	@include at-breakpoint($bigdesktop) {
 		padding: 0;
+		max-width: 72em;
 	}
 
 
@@ -14,7 +19,6 @@
 	display: inline-block;
 	margin: 0  2% 2em 0;
 	vertical-align: top;
-	height: auto;
 	width: 48%;
 
 	&:nth-child(2n) {
@@ -34,24 +38,51 @@
 		}
 	}
 
+	@include at-breakpoint($bigdesktop) {
+		margin: 0  3% 2em 0;
+		width: 22.45%;
 
+		&:nth-child(2n) {
+			margin: 0  3% 2em 0;
+		}
+
+		&:nth-child(3n) {
+			margin: 0  3% 2em 0;
+		}
+
+		&:nth-child(4n) {
+			margin-right: 0;
+		}
+	}
 }
 
 .thumb-data {
 	position: relative;
 	text-align: left;
-	margin-top: .315em;
+	margin-top: -.25em;
 	font-size: .875em;
+	background: darken(white,1%);
+	@include border-radius(0 0 3px 3px);
+	padding: 10px 0 15px;
+	border: 1px solid darken(white, 7%);
+	border-top: none;
+	@include box-shadow(0 1px 0 darken(white, 7%));
+}
+
+.thumb-data > span {
+	padding-left: .625em;
 }
 
 .og-grid li > a  {
 	padding: .625em;
-	background: white;
-	@include box-shadow(0 0 1px rgba(black,0));
+	background: darken(white,1%);
 	display: block;
 	position: relative;
-	border: none;
 	outline: none;
+	@include border-radius(3px 3px 0 0);
+	border: 1px solid darken(white, 7%);
+	border-bottom: none;
+	@include box-shadow(0 1px 1px white inset);
 }
 
 .og-grid li > a img {
@@ -73,15 +104,16 @@
 	width: 0;
 	position: absolute;
 	pointer-events: none;
-	border-bottom-color: $ceta-color;
+	border-bottom-color: lighten($background-color,3%);
 	border-width: 15px;
 	left: 50%;
-	margin: 29px 0 0 -15px;
+	margin: 50px 0 0 -15px;
+	z-index: 99;
 }
 
 .og-expander {
 	position: absolute;
-	background: $ceta-color;
+	background: lighten($background-color,3%);
 	top: auto;
 	left: 0;
 	width: 100%;
@@ -90,6 +122,9 @@
 	height: 0;
 	overflow: hidden;
 	margin-bottom: 1em;
+	border-bottom: 1px solid darken(white,6%);
+	border-top: 1px solid darken(white,6%);
+	@include box-shadow(0 0 5px rgba(black, .15) inset);
 }
 
 .og-expander-inner {
@@ -149,10 +184,12 @@
 
 .og-fullimg img {
 	display: inline-block;
-	max-height: 100%;
+	max-height: 98%;
 	max-width: 100%;
 	padding: .625em;
+	margin-top: 5px;
 	background: white;
+	@include box-shadow(0 0 5px rgba(black, .2));
 }
 
 .og-details h3 {
@@ -160,7 +197,7 @@
 	@include inline-block;
 	padding: 0 1em .21em 0;
 	margin-bottom: 10px;
-	color: $text-color-invert;
+	color: $text-color;
 	letter-spacing: 2pt;
 
 	&:hover {
@@ -169,7 +206,7 @@
 }
 
 .og-details p {
-	color: $text-color-invert;
+	color: $text-color;
 	line-height: .25em;
 	letter-spacing: 1pt;
 	font-family: $body-family;
@@ -184,7 +221,7 @@
 }
 
 .og-details a {
-	color: $text-color-invert;
+	color: $text-color;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	display: inline-block;
@@ -200,6 +237,7 @@
 .detail-title {
 	span {
 		position: relative;
+		letter-spacing: 0;
 
 		&:before {
 			content: '(';
@@ -220,12 +258,13 @@
 
 .box-heart {
 	position: absolute;
-	right: 35px;
+	right: 45px;
 	margin-top: -3.85em;
 	width: 40px;
 	font-size: .75em;
 	padding-right: 5px;
 	text-align: right;
+	display: none;
 
 	i {
 		margin-right: 3px;
@@ -236,11 +275,15 @@
 		margin-top: -1.825em;
 	}
 
+	@include at-breakpoint($landscape) {
+		display: block;
+	}
+
 }
 
 .box-comment {
 	@extend .box-heart;
-	right: 0;
+	right: .625em;
 
 	i {
 		color: $ceta-color;

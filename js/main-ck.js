@@ -1,6 +1,6 @@
 $(function() {
     $(window).roughDraft({
-        author: "hipster",
+        author: "bacon",
         illustrator: "placehold",
         paintColor: [ "d8d8d8" ],
         customIpsum: !1,
@@ -20,8 +20,7 @@ $(function() {
         }
     });
     $("#filter-nav").tinyNav({
-        active: "selected",
-        label: "Jahr:"
+        active: "selected"
     });
     Grid.init();
 });

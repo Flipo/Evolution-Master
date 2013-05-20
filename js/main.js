@@ -1,7 +1,7 @@
 $(function(){
 
   $(window).roughDraft({
-	  author      : 'hipster',
+	  author      : 'bacon',
 	  illustrator : 'placehold',
 	  paintColor  : ['d8d8d8'],
 	  customIpsum : false,
@@ -22,8 +22,7 @@ $(function(){
 	});
 
 	$("#filter-nav").tinyNav({
-	  active: 'selected', // String: Set the "active" class
-	  label: 'Jahr:' // String: Sets the <label> text for the <select> (if not set, no label will be added)
+	  active: 'selected' // String: Set the "active" class
 	});
 
 	Grid.init();

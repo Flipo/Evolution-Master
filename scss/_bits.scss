@@ -4,17 +4,18 @@ $yellow   			:  #f0c500;
 $purple    			:  #8a42b3;
 $turquoise 			:  #33c69c;
 
-$alpha-color 		:  #33c69c;
-$beta-color  		:  #288477;
+$header-color  		:  #1b2020;
+$header-color-light	:  #425454;
+$alpha-color 		:  $header-color;
+$beta-color  		:  $header-color-light;
 $ceta-color  		:  #303c3c;
 $delta-color 		:  #e24e35;
 $gamma-color 		:  #d8d8d8;
 
-$header-color  		:  #1b2020;
-$header-color-light	:  #425454;
 
 
-$background-color 	:  darken(white,5%);
+
+$background-color 	:  darken(white,4%);
 $background-color-invert : lighten(black,10%);
 $text-color 	    :  lighten(black,20%);
 $text-color-invert  :  darken(white,5%);
