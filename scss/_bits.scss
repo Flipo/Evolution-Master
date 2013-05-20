@@ -1,21 +1,25 @@
 $orange    			:  #d76c3e;
 $blue    			:  #2a8da0;
-$yellow   			:  #f0c500;
+$yellow   			:  #fef23c;
 $purple    			:  #8a42b3;
 $turquoise 			:  #33c69c;
 
-$header-color  		:  #1b2020;
+$header-color  		:  #252525;
 $header-color-light	:  #425454;
-$alpha-color 		:  $header-color;
+$alpha-color 		:  #fef23c;
+$dark-alpha-color 	:  #d0c53e;
+$darker-alpha-color :  #c5b92b;
 $beta-color  		:  $header-color-light;
 $ceta-color  		:  #303c3c;
 $delta-color 		:  #e24e35;
 $gamma-color 		:  #d8d8d8;
 
 
+$pop-color 			:  #fff;
+$dark-pop-color   	:  #cccccc;
 
-
-$background-color 	:  darken(white,4%);
+$background-color 	:  #ebebeb;
+$dark-background-color 	:  darken(white,10%);
 $background-color-invert : lighten(black,10%);
 $text-color 	    :  lighten(black,20%);
 $text-color-invert  :  darken(white,5%);
@@ -61,5 +65,22 @@ $bigdesktop        	: 78em 12;
 	font-size: .75em;
 	color: darken($text-color-invert,20%);
 	letter-spacing: 1pt;
+}
+
+@mixin drop-shadow($color){
+	@include box-shadow(0 3px 0 $color);
+}
+
+@mixin drop-shadow-inset($color){
+	@include box-shadow(0 3px 0 $color inset);
+}
+
+@mixin button-shadow($color){
+	@include box-shadow(0 3px 0 $color);
+
+	&:hover {
+		@include box-shadow(0 1px 0 $color);
+		@include transform(translateY(2px));
+	}
 }
 

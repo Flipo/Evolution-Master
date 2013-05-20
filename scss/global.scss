@@ -39,9 +39,8 @@ img {
 
 .head {
 	background-color: $header-color;
-	border-bottom: 1px solid lighten($header-color,10%);
 	height: 50px;
-	@include background-image(linear-gradient(lighten($header-color,3%),$header-color));
+	@include drop-shadow($dark-pop-color);
 
 	@include at-breakpoint($smalltablet) {
 		height: 50px;
@@ -82,7 +81,6 @@ img {
 .top-menu {
 	@extend %right;
 	line-height: 50px;
-	border-left: 1px solid black;
 	width: 155px;
 
 	ul {
@@ -91,9 +89,6 @@ img {
 
 	li {
 		padding: 0 .75em;
-		border-left: 1px solid #303c3c;
-		border-right: 1px solid black;
-
 
 		a {
 			@extend %header-text-layout;
@@ -101,19 +96,19 @@ img {
 
 		&:last-child {
 			padding-right: 0;
-			border-right: none;
 		}
 	}
 
 	input[type="search"] {
 		border: none;
 		outline: none;
-		background: $background-color;
+		background: $pop-color;
 		width: 150px;
 		height: 20px;
 		@include border-radius(2px);
 		font-size: .75em;
 		text-indent: 5px;
+		@include drop-shadow-inset($dark-pop-color);
 	}
 
 	input[type="submit"] {
@@ -121,11 +116,12 @@ img {
 		outline: none;
 		width: 24px;
 		height: 24px;
-		background: $header-color-light;
+		background: $background-color;
 		@include border-radius(2px);
 		position: relative;
-		top: 1px;
-		font-family: $symbol-family;}
+		top: 2px;
+		font-family: $symbol-family;
+		@include button-shadow($dark-pop-color);}
 
 
 	@include at-breakpoint($smalltablet) {
@@ -139,10 +135,6 @@ img {
 
 .filter-bar {
 	margin-bottom: 2em;
-	border-bottom: 1px solid darken($background-color,5%);
-	background: white;
-	@include box-shadow(0 1px 1px rgba(white,1));
-	@include background-image(linear-gradient(white, darken(white,4%)));
 }
 
 .filter-nav {
@@ -168,11 +160,11 @@ img {
 				width: 100%;
 				max-width: 70px;
 				height: 24px;
-				background: darken($background-color,3%);
+				background: $pop-color;
 				@include border-radius(2px);
 				margin-right: 10px;
 				text-align: center;
-				@include box-shadow(0 1px 0 white);
+				@include box-shadow(0 3px 0 $dark-pop-color);
 
 				a {
 					color: $text-color;
@@ -192,22 +184,26 @@ img {
 				}
 
 				&:hover {
-					background: $header-color-light;
+					@include box-shadow(0 1px 0 $dark-pop-color);
+					@include transform(translateY(2px));
 
 					a {
-						color: $text-color-invert;
+						color: $dark-pop-color;
 					}
 				}
 
 				&.active {
-					background: $header-color-light;
+					background: $alpha-color;
+					@include box-shadow(0 3px 0 $dark-alpha-color);
+					color: $darker-alpha-color;
 
 					&:hover {
-						background: $header-color;
+						@include box-shadow(0 1px 0 $dark-alpha-color);
+						@include transform(translateY(2px));
 					}
 
 					a {
-						color: $text-color-invert;
+						color: $darker-alpha-color;
 					}
 				}
 		}

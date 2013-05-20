@@ -59,30 +59,37 @@
 .thumb-data {
 	position: relative;
 	text-align: left;
-	margin-top: -.25em;
+	top: -15px;
 	font-size: .875em;
-	background: darken(white,1%);
+	background: $pop-color;
 	@include border-radius(0 0 3px 3px);
-	padding: 10px 0 15px;
-	border: 1px solid darken(white, 7%);
-	border-top: none;
-	@include box-shadow(0 1px 0 darken(white, 7%));
+	padding: 10px .625em 15px;
+	@include drop-shadow($dark-pop-color);
+	line-height: 1em;
 }
 
 .thumb-data > span {
-	padding-left: .625em;
+	font-family: $body-family-bold;
+}
+
+.thumb-meta {
+	padding: 10px 0 0;
+	border-top: 1px solid $dark-pop-color;
+	color: darken($dark-pop-color,5%);
+	margin-top: 10px;
 }
 
 .og-grid li > a  {
 	padding: .625em;
-	background: darken(white,1%);
+	background: $pop-color;
 	display: block;
 	position: relative;
 	outline: none;
 	@include border-radius(3px 3px 0 0);
-	border: 1px solid darken(white, 7%);
-	border-bottom: none;
-	@include box-shadow(0 1px 1px white inset);
+
+	&:hover {
+		border: none;
+	}
 }
 
 .og-grid li > a img {
@@ -268,11 +275,11 @@
 
 	i {
 		margin-right: 3px;
-		color: $ceta-color;
+		color: inherit;
 	}
 
 	@include at-breakpoint($smalltablet) {
-		margin-top: -1.825em;
+		margin-top: -1.25em;
 	}
 
 	@include at-breakpoint($landscape) {
@@ -286,7 +293,7 @@
 	right: .625em;
 
 	i {
-		color: $ceta-color;
+		color: inherit;
 	}
 
 }
