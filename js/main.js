@@ -23,16 +23,25 @@ $(function(){
 	  }
 	});
 
-	$("#filter-nav").tinyNav({
-	  active: 'selected' // String: Set the "active" class
-	});
-
 	Grid.init();
 
 	klapp.on("click", function(e){
 	  intro.toggleClass('eingeklappt');
 	  return false;
 	});
+
+	 $('#left-menu').sidr({
+		 name: 'sidr-left',
+		 side: 'left' // By default
+	});
+
+	$('#right-menu').sidr({
+		name: 'sidr-right',
+		side: 'right'
+	});
+
+	$('#og-grid').mixitup();
+
 
 });
 

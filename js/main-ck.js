@@ -20,12 +20,18 @@ $(function() {
             yearNumberTwo: "y"
         }
     });
-    $("#filter-nav").tinyNav({
-        active: "selected"
-    });
     Grid.init();
     e.on("click", function(e) {
         t.toggleClass("eingeklappt");
         return !1;
     });
+    $("#left-menu").sidr({
+        name: "sidr-left",
+        side: "left"
+    });
+    $("#right-menu").sidr({
+        name: "sidr-right",
+        side: "right"
+    });
+    $("#og-grid").mixitup();
 });

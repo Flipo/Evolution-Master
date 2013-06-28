@@ -42,6 +42,7 @@ img {
 	border-bottom: 1px solid lighten($header-color,5%);
 	position: relative;
 	z-index: 999;
+	overflow: hidden;
 
 	@include at-breakpoint($smalltablet) {
 		height: 40px;
@@ -148,7 +149,7 @@ img {
 		border: none;
 		outline: none;
 		width: 24px;
-		height: 20px;
+		height: 19px;
 		margin-left: -27px;
 		margin-right: 22px;
 		background: $background-color;
@@ -174,21 +175,36 @@ img {
 }
 
 .filter-bar {
-	margin-bottom: 2em;
+	margin-bottom: 0;
+	margin-top: -20px;
+	@include at-breakpoint($smalltablet) {
+		margin-top: 0;
+		margin-bottom: 2em;
+	}
 }
 
 .filter-nav {
 	@include container($total-columns, $landscape, $smalltablet, $tablet, $desktop, $bigdesktop);
 	height: 70px;
-	padding: 0 1.35em;
+	padding: 0;
 	position: relative;
+	width: 100%;
+	max-width: 100%;
 
 	@include at-breakpoint($landscape) {
+		padding: 0;
+		width: 100%;
+		max-width: 100%;
+	}
+
+	@include at-breakpoint($smalltablet) {
 		padding: 0 0.625em;
+		max-width: 72em;
 	}
 
 	@include at-breakpoint($bigdesktop) {
 		padding: 0;
+		max-width: 72em;
 	}
 
 
@@ -253,6 +269,7 @@ img {
 
 }
 
+/*
 .tinynav_label {
 	color: $text-color-invert;
 	line-height: 3em;
@@ -290,11 +307,16 @@ img {
 	}
 
 }
+*/
 
 .year-select {
 	padding-top: 24px;
 	@include span-columns(6,12);
-	display: table;
+	display: none;
+
+	@include at-breakpoint($smalltablet) {
+		display: table;
+	}
 }
 
 .trends-select {
@@ -306,6 +328,11 @@ img {
 	@include box-shadow(0 3px 0 $dark-pop-color inset);
 	height: 40px;
 	margin-right: 2px;
+	display: none;
+
+	@include at-breakpoint($smalltablet) {
+		display: block;
+	}
 
 	label {
 		@extend .tinynav_label;
@@ -338,6 +365,42 @@ img {
 	padding: 0 15px;
 }
 
+
+.mobile-toggle {
+	background: white;
+	width: 50%;
+	display: block;
+	float: left;
+	padding: 10px;
+	text-align: center;
+	@include button-shadow($dark-pop-color);
+
+	&:hover {
+		background: darken(white,2%)
+	}
+
+	@include at-breakpoint($smalltablet) {
+		display: none;
+	}
+}
+
+.year-toggle {
+	border-right: 1px solid $dark-pop-color;
+	i {
+		margin-right: 5px;
+		position: relative;
+		bottom: -1px;
+	}
+}
+
+.trend-toggle {
+
+	i {
+		margin-left: 5px;
+		position: relative;
+		bottom: -1px;
+	}
+}
 
 
 .foot {
@@ -395,13 +458,17 @@ img {
 @import "plugins";
 
 .intro {
-	max-height: 358px;
+	max-height: 1371px;
 	margin: 0;
 	padding: 0;
 	@include transition(all .2s linear);
 	overflow: hidden;
 	position: relative;
 	top: -20px;
+
+	@include at-breakpoint($smalltablet) {
+		max-height: 358px;
+	}
 
 	&.eingeklappt {
 		max-height: 0;
@@ -438,9 +505,13 @@ img {
 
 .year-intro {
 	@include container($total-columns, $landscape, $smalltablet, $tablet, $desktop, $bigdesktop);
-	padding: 55px 0;
+	padding: 35px 20px;
 	position: relative;
 	z-index: 999;
+
+	@include at-breakpoint($smalltablet) {
+		padding: 55px 0;
+	}
 
 
 
@@ -457,6 +528,11 @@ img {
 		background: $header-color;
 		border: 1px solid lighten($header-color, 10%);
 		@include border-radius(3px);
+
+		display: none;
+		@include at-breakpoint($smalltablet) {
+			display: block;
+		}
 	}
 
 
@@ -466,15 +542,27 @@ img {
 	}
 
 	article {
-		@include span-columns(6,12);
+		@include span-columns(12,12);
 		padding: 35px 20px 20px;
 		background: white;
+		margin-bottom: 20px;
+
+		@include at-breakpoint($smalltablet) {
+			@include span-columns(6,12);
+			margin-bottom: 0;
+		}
 	}
 
 	aside {
-		@include span-columns(3 omega,12);
+		@include span-columns(12,12);
 		padding: 35px 20px 20px;
 		background: white;
+		display: none;
+
+		@include at-breakpoint($smalltablet) {
+			display: block;
+			@include span-columns(3 omega,12);
+		}
 
 		ul {
 			@extend %horizontal-list;
