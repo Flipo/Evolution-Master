@@ -1,24 +1,23 @@
-$fontAwesomePath:   "../font" !default;
 $borderColor:       #eee;
 $iconMuted:         #eee;
 
 @font-face {
   font-family: 'FontAwesome';
-  src: url('#{$fontAwesomePath}/fontawesome-webfont.eot?v=3.0.1');
-  src: url('#{$fontAwesomePath}/fontawesome-webfont.eot?#iefix&v=3.0.1') format("embedded-opentype"),
-    url('#{$fontAwesomePath}/fontawesome-webfont.woff?v=3.0.1') format("woff"),
-    url('#{$fontAwesomePath}/fontawesome-webfont.ttf?v=3.0.1') format("truetype");
+  src: url('../font/fontawesome-webfont.eot?v=3.0.1');
+  src: url('../font/fontawesome-webfont.eot?#iefix&v=3.0.1') format("embedded-opentype"),
+    url('../font/fontawesome-webfont.woff?v=3.0.1') format("woff"),
+    url('../font/fontawesome-webfont.ttf?v=3.0.1') format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
     font-family: 'SourceSansProExtraLight';
-    src: url('$fontAwesomePath/SourceSansPro-ExtraLight-webfont.eot');
-    src: url('$fontAwesomePath/SourceSansPro-ExtraLight-webfont.eot?#iefix') format('embedded-opentype'),
-         url('$fontAwesomePath/SourceSansPro-ExtraLight-webfont.woff') format('woff'),
-         url('$fontAwesomePath/SourceSansPro-ExtraLight-webfont.ttf') format('truetype'),
-         url('$fontAwesomePath/SourceSansPro-ExtraLight-webfont.svg#SourceSansProExtraLight') format('svg');
+    src: url('../font/SourceSansPro-ExtraLight-webfont.eot');
+    src: url('../font/SourceSansPro-ExtraLight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/SourceSansPro-ExtraLight-webfont.woff') format('woff'),
+         url('../font/SourceSansPro-ExtraLight-webfont.ttf') format('truetype'),
+         url('../font/SourceSansPro-ExtraLight-webfont.svg#SourceSansProExtraLight') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -26,11 +25,11 @@ $iconMuted:         #eee;
 
 @font-face {
     font-family: 'SourceSansProExtraLightItalic';
-    src: url('$fontAwesomePath/SourceSansPro-ExtraLightIt-webfont.eot');
-    src: url('$fontAwesomePath/SourceSansPro-ExtraLightIt-webfont.eot?#iefix') format('embedded-opentype'),
-         url('$fontAwesomePath/SourceSansPro-ExtraLightIt-webfont.woff') format('woff'),
-         url('$fontAwesomePath/SourceSansPro-ExtraLightIt-webfont.ttf') format('truetype'),
-         url('$fontAwesomePath/SourceSansPro-ExtraLightIt-webfont.svg#SourceSansProExtraLightItalic') format('svg');
+    src: url('../font/SourceSansPro-ExtraLightIt-webfont.eot');
+    src: url('../font/SourceSansPro-ExtraLightIt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/SourceSansPro-ExtraLightIt-webfont.woff') format('woff'),
+         url('../font/SourceSansPro-ExtraLightIt-webfont.ttf') format('truetype'),
+         url('../font/SourceSansPro-ExtraLightIt-webfont.svg#SourceSansProExtraLightItalic') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -38,11 +37,11 @@ $iconMuted:         #eee;
 
 @font-face {
     font-family: 'SourceSansProLight';
-    src: url('$fontAwesomePath/SourceSansPro-Light-webfont.eot');
-    src: url('$fontAwesomePath/SourceSansPro-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('$fontAwesomePath/SourceSansPro-Light-webfont.woff') format('woff'),
-         url('$fontAwesomePath/SourceSansPro-Light-webfont.ttf') format('truetype'),
-         url('$fontAwesomePath/SourceSansPro-Light-webfont.svg#SourceSansProLight') format('svg');
+    src: url('../font/SourceSansPro-Light-webfont.eot');
+    src: url('../font/SourceSansPro-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/SourceSansPro-Light-webfont.woff') format('woff'),
+         url('../font/SourceSansPro-Light-webfont.ttf') format('truetype'),
+         url('../font/SourceSansPro-Light-webfont.svg#SourceSansProLight') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -50,11 +49,11 @@ $iconMuted:         #eee;
 
 @font-face {
     font-family: 'SourceSansProLightItalic';
-    src: url('$fontAwesomePath/SourceSansPro-LightIt-webfont.eot');
-    src: url('$fontAwesomePath/SourceSansPro-LightIt-webfont.eot?#iefix') format('embedded-opentype'),
-         url('$fontAwesomePath/SourceSansPro-LightIt-webfont.woff') format('woff'),
-         url('$fontAwesomePath/SourceSansPro-LightIt-webfont.ttf') format('truetype'),
-         url('$fontAwesomePath/SourceSansPro-LightIt-webfont.svg#SourceSansProLightItalic') format('svg');
+    src: url('../font/SourceSansPro-LightIt-webfont.eot');
+    src: url('../font/SourceSansPro-LightIt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/SourceSansPro-LightIt-webfont.woff') format('woff'),
+         url('../font/SourceSansPro-LightIt-webfont.ttf') format('truetype'),
+         url('../font/SourceSansPro-LightIt-webfont.svg#SourceSansProLightItalic') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -62,11 +61,11 @@ $iconMuted:         #eee;
 
 @font-face {
     font-family: 'SourceSansProRegular';
-    src: url('$fontAwesomePath/SourceSansPro-Regular-webfont.eot');
-    src: url('$fontAwesomePath/SourceSansPro-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('$fontAwesomePath/SourceSansPro-Regular-webfont.woff') format('woff'),
-         url('$fontAwesomePath/SourceSansPro-Regular-webfont.ttf') format('truetype'),
-         url('$fontAwesomePath/SourceSansPro-Regular-webfont.svg#SourceSansProRegular') format('svg');
+    src: url('../font/SourceSansPro-Regular-webfont.eot');
+    src: url('../font/SourceSansPro-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/SourceSansPro-Regular-webfont.woff') format('woff'),
+         url('../font/SourceSansPro-Regular-webfont.ttf') format('truetype'),
+         url('../font/SourceSansPro-Regular-webfont.svg#SourceSansProRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -74,11 +73,11 @@ $iconMuted:         #eee;
 
 @font-face {
     font-family: 'SourceSansProItalic';
-    src: url('$fontAwesomePath/SourceSansPro-It-webfont.eot');
-    src: url('$fontAwesomePath/SourceSansPro-It-webfont.eot?#iefix') format('embedded-opentype'),
-         url('$fontAwesomePath/SourceSansPro-It-webfont.woff') format('woff'),
-         url('$fontAwesomePath/SourceSansPro-It-webfont.ttf') format('truetype'),
-         url('$fontAwesomePath/SourceSansPro-It-webfont.svg#SourceSansProItalic') format('svg');
+    src: url('../font/SourceSansPro-It-webfont.eot');
+    src: url('../font/SourceSansPro-It-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/SourceSansPro-It-webfont.woff') format('woff'),
+         url('../font/SourceSansPro-It-webfont.ttf') format('truetype'),
+         url('../font/SourceSansPro-It-webfont.svg#SourceSansProItalic') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -86,11 +85,11 @@ $iconMuted:         #eee;
 
 @font-face {
     font-family: 'SourceSansProSemibold';
-    src: url('$fontAwesomePath/SourceSansPro-Semibold-webfont.eot');
-    src: url('$fontAwesomePath/SourceSansPro-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('$fontAwesomePath/SourceSansPro-Semibold-webfont.woff') format('woff'),
-         url('$fontAwesomePath/SourceSansPro-Semibold-webfont.ttf') format('truetype'),
-         url('$fontAwesomePath/SourceSansPro-Semibold-webfont.svg#SourceSansProSemibold') format('svg');
+    src: url('../font/SourceSansPro-Semibold-webfont.eot');
+    src: url('../font/SourceSansPro-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/SourceSansPro-Semibold-webfont.woff') format('woff'),
+         url('../font/SourceSansPro-Semibold-webfont.ttf') format('truetype'),
+         url('../font/SourceSansPro-Semibold-webfont.svg#SourceSansProSemibold') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -98,11 +97,11 @@ $iconMuted:         #eee;
 
 @font-face {
     font-family: 'SourceSansProSemiboldItalic';
-    src: url('$fontAwesomePath/SourceSansPro-SemiboldIt-webfont.eot');
-    src: url('$fontAwesomePath/SourceSansPro-SemiboldIt-webfont.eot?#iefix') format('embedded-opentype'),
-         url('$fontAwesomePath/SourceSansPro-SemiboldIt-webfont.woff') format('woff'),
-         url('$fontAwesomePath/SourceSansPro-SemiboldIt-webfont.ttf') format('truetype'),
-         url('$fontAwesomePath/SourceSansPro-SemiboldIt-webfont.svg#SourceSansProSemiboldItalic') format('svg');
+    src: url('../font/SourceSansPro-SemiboldIt-webfont.eot');
+    src: url('../font/SourceSansPro-SemiboldIt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/SourceSansPro-SemiboldIt-webfont.woff') format('woff'),
+         url('../font/SourceSansPro-SemiboldIt-webfont.ttf') format('truetype'),
+         url('../font/SourceSansPro-SemiboldIt-webfont.svg#SourceSansProSemiboldItalic') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -110,11 +109,11 @@ $iconMuted:         #eee;
 
 @font-face {
     font-family: 'SourceSansProBold';
-    src: url('$fontAwesomePath/SourceSansPro-Bold-webfont.eot');
-    src: url('$fontAwesomePath/SourceSansPro-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('$fontAwesomePath/SourceSansPro-Bold-webfont.woff') format('woff'),
-         url('$fontAwesomePath/SourceSansPro-Bold-webfont.ttf') format('truetype'),
-         url('$fontAwesomePath/SourceSansPro-Bold-webfont.svg#SourceSansProBold') format('svg');
+    src: url('../font/SourceSansPro-Bold-webfont.eot');
+    src: url('../font/SourceSansPro-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/SourceSansPro-Bold-webfont.woff') format('woff'),
+         url('../font/SourceSansPro-Bold-webfont.ttf') format('truetype'),
+         url('../font/SourceSansPro-Bold-webfont.svg#SourceSansProBold') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -122,11 +121,11 @@ $iconMuted:         #eee;
 
 @font-face {
     font-family: 'SourceSansProBoldItalic';
-    src: url('$fontAwesomePath/SourceSansPro-BoldIt-webfont.eot');
-    src: url('$fontAwesomePath/SourceSansPro-BoldIt-webfont.eot?#iefix') format('embedded-opentype'),
-         url('$fontAwesomePath/SourceSansPro-BoldIt-webfont.woff') format('woff'),
-         url('$fontAwesomePath/SourceSansPro-BoldIt-webfont.ttf') format('truetype'),
-         url('$fontAwesomePath/SourceSansPro-BoldIt-webfont.svg#SourceSansProBoldItalic') format('svg');
+    src: url('../font/SourceSansPro-BoldIt-webfont.eot');
+    src: url('../font/SourceSansPro-BoldIt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/SourceSansPro-BoldIt-webfont.woff') format('woff'),
+         url('../font/SourceSansPro-BoldIt-webfont.ttf') format('truetype'),
+         url('../font/SourceSansPro-BoldIt-webfont.svg#SourceSansProBoldItalic') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -134,11 +133,11 @@ $iconMuted:         #eee;
 
 @font-face {
     font-family: 'SourceSansProBlack';
-    src: url('$fontAwesomePath/SourceSansPro-Black-webfont.eot');
-    src: url('$fontAwesomePath/SourceSansPro-Black-webfont.eot?#iefix') format('embedded-opentype'),
-         url('$fontAwesomePath/SourceSansPro-Black-webfont.woff') format('woff'),
-         url('$fontAwesomePath/SourceSansPro-Black-webfont.ttf') format('truetype'),
-         url('$fontAwesomePath/SourceSansPro-Black-webfont.svg#SourceSansProBlack') format('svg');
+    src: url('../font/SourceSansPro-Black-webfont.eot');
+    src: url('../font/SourceSansPro-Black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/SourceSansPro-Black-webfont.woff') format('woff'),
+         url('../font/SourceSansPro-Black-webfont.ttf') format('truetype'),
+         url('../font/SourceSansPro-Black-webfont.svg#SourceSansProBlack') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -146,11 +145,11 @@ $iconMuted:         #eee;
 
 @font-face {
     font-family: 'SourceSansProBlackItalic';
-    src: url('$fontAwesomePath/SourceSansPro-BlackIt-webfont.eot');
-    src: url('$fontAwesomePath/SourceSansPro-BlackIt-webfont.eot?#iefix') format('embedded-opentype'),
-         url('$fontAwesomePath/SourceSansPro-BlackIt-webfont.woff') format('woff'),
-         url('$fontAwesomePath/SourceSansPro-BlackIt-webfont.ttf') format('truetype'),
-         url('$fontAwesomePath/SourceSansPro-BlackIt-webfont.svg#SourceSansProBlackItalic') format('svg');
+    src: url('../font/SourceSansPro-BlackIt-webfont.eot');
+    src: url('../font/SourceSansPro-BlackIt-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/SourceSansPro-BlackIt-webfont.woff') format('woff'),
+         url('../font/SourceSansPro-BlackIt-webfont.ttf') format('truetype'),
+         url('../font/SourceSansPro-BlackIt-webfont.svg#SourceSansProBlackItalic') format('svg');
     font-weight: normal;
     font-style: normal;
 
