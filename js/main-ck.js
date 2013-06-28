@@ -1,4 +1,5 @@
 $(function() {
+    var e = $("a.klapp-toggle"), t = $(".intro");
     $(window).roughDraft({
         author: "bacon",
         illustrator: "placehold",
@@ -23,4 +24,8 @@ $(function() {
         active: "selected"
     });
     Grid.init();
+    e.on("click", function(e) {
+        t.toggleClass("eingeklappt");
+        return !1;
+    });
 });

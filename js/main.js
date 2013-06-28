@@ -1,4 +1,6 @@
 $(function(){
+  var klapp = $("a.klapp-toggle");
+  var intro = $(".intro");
 
   $(window).roughDraft({
 	  author      : 'bacon',
@@ -26,6 +28,11 @@ $(function(){
 	});
 
 	Grid.init();
+
+	klapp.on("click", function(e){
+	  intro.toggleClass('eingeklappt');
+	  return false;
+	});
 
 });
 
