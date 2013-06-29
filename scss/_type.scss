@@ -211,6 +211,7 @@ a:focus {
 /* Better CSS outline suppression: people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active {
 	outline: none;
+	cursor: pointer;
 }
 
 /* Figures

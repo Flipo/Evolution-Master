@@ -1,14 +1,14 @@
 $orange    			:  #d76c3e;
 $blue    			:  #2a8da0;
-$yellow   			:  #fef23c;
+$yellow   			:  #fff23c;
 $purple    			:  #8a42b3;
 $turquoise 			:  #33c69c;
 
 $header-color  		:  #252525;
 $header-color-light	:  #425454;
-$alpha-color 		:  #fef23c;
-$dark-alpha-color 	:  #d0c53e;
-$darker-alpha-color :  #c5b92b;
+$alpha-color 		:  #fff23c;
+$dark-alpha-color 	:  #b2a726;
+$darker-alpha-color :  #565009;
 $beta-color  		:  $header-color-light;
 $ceta-color  		:  #303c3c;
 $delta-color 		:  #e24e35;
@@ -68,6 +68,17 @@ $bigdesktop        	: 78em 12;
 	letter-spacing: 1pt;
 }
 
+%clearfix {
+  *zoom: 1;
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
 @mixin drop-shadow($color){
 	@include box-shadow(0 3px 0 $color);
 }
@@ -83,5 +94,24 @@ $bigdesktop        	: 78em 12;
 		@include box-shadow(0 1px 0 $color);
 		@include transform(translateY(2px));
 	}
+}
+
+@mixin card($color){
+	@include box-shadow(0 3px 0 $color);
+	@include border-radius(3px);
+	background: white;
+	padding: .625em;
+}
+
+.container {
+	@include container($total-columns, $landscape, $smalltablet, $tablet, $desktop, $bigdesktop);
+}
+
+.left {
+	@extend %left;
+}
+
+.right {
+	@extend %right;
 }
 

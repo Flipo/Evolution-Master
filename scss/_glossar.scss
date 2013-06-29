@@ -1,0 +1,134 @@
+.glossar {
+	background: white;
+	@include drop-shadow($dark-pop-color);
+	margin: 0 0 5em 0;
+
+	@include at-breakpoint($smalltablet) {
+		max-height: 140px !important;
+	}
+
+	&.eingeklappt {
+		max-height: 0 !important;
+		@include transition(all .2s linear);
+	}
+
+	h1 {
+		text-align: left;
+		line-height: 1.4em !important;
+		font-size: 2.25em;
+		color: black;
+		@extend %left;
+		width: 100%;
+		display: block;
+		border-bottom: 1px solid lighten($dark-pop-color,10%);
+	}
+}
+
+.back-year {
+	position: absolute;
+	top: 75px;
+	right: 0;
+
+	&:hover {
+		color: black;
+		text-decoration: underline;
+	}
+
+}
+
+.glossar-container {
+		@include at-breakpoint($smalltablet) {
+			max-width: 72em;
+		}
+
+		@include at-breakpoint($bigdesktop) {
+			max-width: 72em;
+			padding: 0;
+		}
+
+		h1 {
+			font-size: 3em;
+			margin-bottom: 40px;
+			color: darken(white,60%);
+		}
+}
+
+.glossar-content {
+	@include span-columns(7,12);
+	margin-bottom: 5em;
+}
+
+.glossar-article {
+	h2 {
+		font-size: 1.5em;
+		margin-bottom: 10px;
+		line-height: 0;
+		font-family: $body-family-regular;
+		color: black;
+		padding-top: 20px;
+	}
+
+	span.year {
+		display: block;
+		color: darken(white,60%);
+		font-family: $body-family-regular;
+		margin-bottom: 35px;
+	}
+
+	p {
+		font-family: $body-family-regular;
+	}
+
+	.more-pics {
+		margin-bottom: 40px;
+		display: block;
+		text-decoration: underline;
+		font-size: .875em;
+		font-family: $body-family-regular;
+
+		&:hover {
+			text-decoration: none;
+			color: black;
+		}
+	}
+
+	ul {
+		list-style: none;
+		@extend %horizontal-list;
+		@extend %clearfix;
+
+
+		li {
+			max-width: 180px;
+			@include card($dark-pop-color);
+			margin-right: 10px;
+		}
+	}
+}
+
+
+
+
+.glossar-sidebar {
+	@include span-columns(3 omega,12);
+
+	ul {
+		list-style: none;
+	}
+
+	li {
+		font-family: $body-family-bold;
+		color: black;
+	}
+
+
+	a {
+		font-family: $body-family-regular;
+
+		&:hover {
+			text-decoration: underline;
+			color: black;
+		}
+	}
+
+}

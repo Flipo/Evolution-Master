@@ -6,20 +6,21 @@
 <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Welcome to Evoluzzer</title>
+    <title>Wilkommen - evoluzzr.de</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/introjs.min.css">
     <script src="js/vendor/modernizr.custom.js"></script>
 </head>
 <body>
 	<section class="full head">
 		<header class="main-header">
 			<div class="logo">
-				<img src="img/logo.svg" />
+				<a href="index.html" class="transition"><img src="img/logo.svg" /></a>
 				<p>Evolution des Webdesign</p>
 			</div>
 			<div class="top-menu">
@@ -32,7 +33,7 @@
 					</li>
 					<li>
 						<input type="search" placeholder="Suche">
-						<input type="submit" value="">
+						<a href="#" class="search-link"><i class="icon-search"></i></a>
 					</li>
 					<li>
 						<a href="#" class="klapp-toggle"><i class="icon-double-angle-down"></i></a>
@@ -42,57 +43,39 @@
 			</div>
 		</header>
 	</section>
-	<section class="full year-2012 intro">
+	<section class="full startpage intro">
 			<div class="year-intro">
-			<div class="filler">
-				filler
+				<h1>Teile deine Arbeiten und erlebe </br>die Evolution des Webdesign!</h1>
+
+				<a class="tour-link" id="startButton"><i class="icon-bolt"></i>Sieh, was evoluzzr zu bieten hat</a>
+				<a class="register-link"><i class="icon-group"></i>Werde Teil der Community</a>
 			</div>
-			<article>
-				<h1>Das Jahr 2012</h1>
-				<p> Das mobile Web ist auf dem Vormarsch. Immer mehr Internetseiten werden auf die Bildschirmgrößen von Smartphones und Tablets angepasst. Um die immer größer werdende Masse an Informationen verarbeiten zu können steht ein klarer Aufbau, gute Lesbarkeit und einfache Benutzung im Mittelpunkt des aktuellen Webdesign.</p>
-			</article>
-			<aside>
-				<h2>Webtrends</h2>
-				<ul>
-					<li><a href="#">Kreise</a></li>
-					<li><a href="#">Grid Layouts</a></li>
-					<li><a href="#">Icons</a></li>
-					<li><a href="#">Letterpress / Schleifen</a></li>
-					<li><a href="#">Retro</a></li>
-					<li><a href="#">Condensed Schriften</a></li>
-					<li><a href="#">Skeuomorphismus</a></li>
-					<li><a href="#">Diagonale Linien</a></li>
-				</ul>
-			</aside>
-			<a href="#" class="klapp-toggle"><i class="icon-double-angle-up"></i></a>
-		</div>
 	</section>
 	<div class="full filter-bar">
+
 		<nav class="filter-nav">
-			<div class="year-select">
+			<a href="#" class="klapp-toggle"><i class="icon-double-angle-up"></i></a>
+			<div class="year-select" data-step="1" data-intro="Wähle das Jahr zu dem du hochgeladene Webseiten sehen willst.">
 				<ul id="filter-nav">
-					<li><a href="#">1993</a></li>
-					<li><a href="#">1996</a></li>
-					<li><a href="#">2000</a></li>
-					<li><a href="#">2003</a></li>
-					<li><a href="#">2006</a></li>
-					<li><a href="#">2009</a></li>
-					<li class="active"><a href="#">2012</a></li>
-					<li><a href="#">2013</a></li>
+					<li><a href="1993.html">1993</a></li>
+					<li><a href="1996.html">1996</a></li>
+					<li><a href="2000.html">2000</a></li>
+					<li><a href="2003.html">2003</a></li>
+					<li><a href="2006.html">2006</a></li>
+					<li><a href="2009.html">2009</a></li>
+					<li><a href="2012.html">2012</a></li>
+					<li><a href="2013.html">2013</a></li>
 				</ul>
 			</div>
-			<div class="trends-select">
-				<select class="trends-list">
-					<option>Alle Trends</option>
-					<option data-draft-text="1/w" data-draft-repeat="13" class="filter" data-filter="skeuo"></option>
-				</select>
+			<div class="trends-select ausgeklappt">
+				<h3 class="right">Aktuelle Uploads</h3>
 			</div>
 			<a id="left-menu" href="#left-menu" class="mobile-toggle year-toggle"><i class="icon-double-angle-left"></i>Jahre</a>
 			<a id="right-menu" href="#right-menu" class="mobile-toggle trend-toggle">Trends<i class="icon-double-angle-right"></i></a>
 		</nav>
 	</div>
 			<div class="main">
-				<ul id="og-grid" class="og-grid">
+				<ul id="og-grid" class="og-grid" data-step="2" data-intro="Sieh dir aktuelle Uploads von anderen Community-Mitgliedern an." data-position="top">
 					<li class="mix skeuo">
 						<a 	href="http://thomas.do/"
 							data-largesrc="img/1.jpg"
@@ -405,46 +388,51 @@
 				</ul>
 			</div>
 
-<div class="full foot">
-	<footer class="main-footer">
 
-<ul>
-    <li class="filter" data-filter="lines"></li>
-    <li class="filter" data-filter="skeuo"></li>
-</ul>
-<!--
-		<div class="footer-row1 row">
-			<ul>
-				<li><a href="#">1993</a></li>
-				<li><a href="#">1996</a></li>
-				<li><a href="#">2000</a></li>
-				<li><a href="#">2003</a></li>
-				<li><a href="#">2006</a></li>
-				<li><a href="#">2009</a></li>
-				<li><a href="#">2012</a></li>
-				<li><a href="#">2013</a></li>
-			</ul>
-			<input type="search" placeholder="Suche">
+	<section class="full secondary-footer">
+		<div class="container">
+			<nav>
+				<li><a href="index.html">Start</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="blog.html">Blog</a></li>
+			</nav>
+			<a class="to-top">
+				<i class="icon-angle-up"></i>Nach Oben
+			</a>
 		</div>
--->
-	</footer>
-</div>
+
+	</section>
+	<section class="full meta-footer">
+		<div class="container">
+			<p>&copy; 2013 evoluzzr - Evolution des Webdesign</p>
+			<nav>
+				<li class="share-devider"><a href="#"><i class="icon-twitter-sign"></i></a></li>
+				<li class="share-devider"><a href="#"><i class="icon-google-plus-sign"></i></a></li>
+				<li class="share-devider"><a href="#"><i class="icon-facebook-sign"></i></a></li>
+				<li class="devider">Teilen</li>
+				<li class="devider"><a href="#">Impressum</a></li>
+				<li class="devider"><a href="#">Datenschutzerklärung</a></li>
+			</nav>
+		</div>
+
+	</section>
 
 		<div id="sidr-left" class="sidr left">
 			<ul>
-				<li><a href="#">1993</a></li>
-				<li><a href="#">1996</a></li>
-				<li><a href="#">2000</a></li>
-				<li><a href="#">2003</a></li>
-				<li><a href="#">2006</a></li>
-				<li><a href="#">2009</a></li>
-				<li><a href="#">2012</a></li>
-				<li><a href="#">2013</a></li>
+				<li><a href="1993.html">1993</a></li>
+				<li><a href="1996.html">1996</a></li>
+				<li><a href="2000.html">2000</a></li>
+				<li><a href="2003.html">2003</a></li>
+				<li><a href="2006.html">2006</a></li>
+				<li><a href="2009.html">2009</a></li>
+				<li class="active"><a href="2012.html">2012</a></li>
+				<li><a href="2013.html">2013</a></li>
 			</ul>
 		</div>
 
 		<div id="sidr-right" class="sidr right">
 			<ul>
+				<li><a href="#">Alle Trends</a></li>
 				<li><a href="#">Kreise</a></li>
 				<li><a href="#">Grid Layouts</a></li>
 				<li><a href="#">Icons</a></li>
@@ -456,18 +444,19 @@
 			</ul>
 		</div>
 
+
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 		<script src="js/plugins-ck.js"></script>
+		<script src="js/vendor/intro.min.js"></script>
 		<script src="js/vendor/grid.js"></script>
 		<script src="js/main-ck.js"></script>
-
-		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-		<script>
-			var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-		    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-		    g.src='//www.google-analytics.com/ga.js';
-		    s.parentNode.insertBefore(g,s)}(document,'script'));
-		</script>
+	    <script type="text/javascript">
+	      document.getElementById('startButton').onclick = function() {
+	        introJs().setOption('doneLabel', 'Next page').start().oncomplete(function() {
+	          window.location.href = '2012.html?multipage=true';
+	        });
+	      };
+	    </script>
 	</body>
 </html>

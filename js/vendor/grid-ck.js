@@ -138,6 +138,11 @@ var Grid = function() {
         this.expandedIdx = this.$item.index();
         this.create();
         this.update();
+        $("a.comment-toggle").on("click", function(e) {
+            $(".og-expanded").toggleClass("ausgeklappt");
+            $(".og-expander").toggleClass("ausgeklappt");
+            return !1;
+        });
     }
     var e = $("#og-grid"), t = e.children("li"), n = -1, r = -1, i = 0, s = 10, o = $(window), u, a = $("html, body"), f = {
         WebkitTransition: "webkitTransitionEnd",
@@ -146,27 +151,35 @@ var Grid = function() {
         msTransition: "MSTransitionEnd",
         transition: "transitionend"
     }, l = f[Modernizr.prefixed("transition")], c = Modernizr.csstransitions, h = {
-        minHeight: 500,
+        minHeight: 530,
         speed: 350,
         easing: "ease"
     };
     b.prototype = {
         create: function() {
             this.$title = $("<h3></h3>");
-            this.$description = $('<p>Trend: Skeuomorphismus <span class="label">Informationen</span></p>');
+            this.$description = $('<a href="#"></a>');
+            this.$descripted = $('<div class="detail-item"><i class="icon-tag"></i></div>').append(this.$description);
             this.$year = $("<span></span>");
-            this.$uploader = $('<p>Hochgeladen von: <a href="#">Max Mustermann</a></p>');
+            this.$uploader = $('<a href="#"></a>');
+            this.$uploaded = $('<div class="detail-item"><i class="icon-upload-alt"></i></div>').append(this.$uploader);
+            this.$comments = $("<span></span>");
+            this.$commented = $('<div class="detail-item"><i class="icon-comments"></i></div>').append(this.$comments);
+            this.$likes = $("<span></span>");
+            this.$liked = $('<div class="detail-item"><i class="icon-heart"></i></div>').append(this.$likes);
             this.$like = $('<button class="button like"><i class="icon-heart"></i>Gefällt mir</button>');
             this.$comment = $('<button class="button comment"><i class="icon-comments"></i>Kommentare</button>');
             this.$share = $('<button class="button share"><i class="icon-share"></i>Teilen</button>');
-            this.$buttonbox = $('<div class="button-box"></div>').append(this.$like, this.$comment, this.$share);
+            this.$buttonbox = $('<div class="button-box"></div>').append(this.$like, this.$share);
+            this.$commenttoggle = $('<a class="comment-toggle">Kommentare ausklappen</a>');
             this.$href = $('<a href="#" class="detail-title"></a>').append(this.$title, this.$year);
-            this.$details = $('<div class="og-details"></div>').append(this.$href, this.$description, this.$uploader, this.$buttonbox);
+            this.$details = $('<div class="og-details"></div>').append(this.$href, this.$uploaded, this.$descripted, this.$commented, this.$liked, this.$buttonbox, this.$commenttoggle);
             this.$loading = $('<div class="og-loading"></div>');
             this.$fullimage = $('<div class="og-fullimg"></div>').append(this.$loading);
             this.$closePreview = $('<span class="og-close"></span>');
+            this.$commentinner = $('<div class="comment-container"> <div class="comments-section"> <div class="comment-box"> <div class="avatar-box"> <img src="img/avatar/1.jpg"> </div> <div class="text-box"> <h4>Max Mustermann</h4> <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p> <p><b>vor 12 Stunden</b></p> </div> </div> <div class="comment-box"> <div class="avatar-box"> <img src="img/avatar/2.jpg"> </div> <div class="text-box"> <h4>Max Mustermann</h4> <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p> <p><b>vor 12 Stunden</b></p> </div> </div> <div class="comment-box"> <div class="avatar-box"> <img src="img/avatar/3.jpg"> </div> <div class="text-box"> <h4>Max Mustermann</h4> <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p> <p><b>vor 12 Stunden</b></p> </div> </div> <div class="comment-box"> <div class="avatar-box"> <img src="img/avatar/4.jpg"> </div> <div class="text-box"> <h4>Max Mustermann</h4> <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p> <p><b>vor 12 Stunden</b></p> </div> </div> <div class="comment-box"> <div class="avatar-box"> <img src="img/avatar/5.jpg"> </div> <div class="text-box"> <h4>Max Mustermann</h4> <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p> <p><b>vor 12 Stunden</b></p> </div> </div> <div class="comment-box"> <div class="avatar-box"> <img src="img/avatar/6.jpg"> </div> <div class="text-box"> <h4>Max Mustermann</h4> <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p> <p><b>vor 12 Stunden</b></p> </div> </div> <div class="comment-box"> <div class="avatar-box"> <img src="img/avatar/me.jpg"> </div> <div class="text-box"> <form> <textarea></textarea> <a href="#"><i class="icon-edit"></i>Absenden</a> </form> </div> </div> </div> <div class="likes-section"> <h4>Gefällt das</h4> <ul> <li><img src="img/avatar/1.jpg"></li> <li><img src="img/avatar/2.jpg"></li> <li><img src="img/avatar/7.jpg"></li> <li><img src="img/avatar/3.jpg"></li> <li><img src="img/avatar/6.jpg"></li> <li><img src="img/avatar/9.jpg"></li> <li><img src="img/avatar/8.jpg"></li> <li><img src="img/avatar/4.jpg"></li> <li><img src="img/avatar/10.jpg"></li> <li><img src="img/avatar/11.jpg"></li> </ul> </div> </div>');
             this.$previewInner = $('<div class="og-expander-inner"></div>').append(this.$closePreview, this.$fullimage, this.$details);
-            this.$previewEl = $('<div class="og-expander"></div>').append(this.$previewInner);
+            this.$previewEl = $('<div class="og-expander"></div>').append(this.$previewInner, this.$commentinner);
             this.$item.append(this.getEl());
             c && this.setTransition();
         },
@@ -185,10 +198,16 @@ var Grid = function() {
                 title: i.data("title"),
                 description: i.data("description"),
                 year: i.data("year"),
-                uploader: i.data("uploader")
+                uploader: i.data("uploader"),
+                comments: i.data("comments"),
+                likes: i.data("likes")
             };
             this.$title.html(s.title);
+            this.$description.html(s.description);
             this.$year.html(s.year);
+            this.$uploader.html(s.uploader);
+            this.$comments.html(s.comments);
+            this.$likes.html(s.likes);
             this.$href.attr("href", s.href);
             var o = this;
             typeof o.$largeImg != "undefined" && o.$largeImg.remove();

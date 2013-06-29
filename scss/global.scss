@@ -16,6 +16,10 @@
 	@include susy-grid-background; }
 
 html {
+	background: $header-color;
+}
+
+body {
 	background: $background-color;
 }
 
@@ -145,7 +149,7 @@ img {
 		margin: 0 21px;
 	}
 
-	input[type="submit"] {
+	.search-link {
 		border: none;
 		outline: none;
 		width: 24px;
@@ -155,12 +159,21 @@ img {
 		background: $background-color;
 		@include border-radius(2px);
 		position: relative;
-		top: 2px;
+		top: 5px;
 		font-family: $symbol-family;
 		@include button-shadow($dark-pop-color);
+		display: inline-block;
+		padding: 0;
 
 		&:hover {
 			background: darken($background-color,5%);
+		}
+
+		i {
+			position: relative;
+			top: -10px;
+			left: 4px;
+			color: darken($dark-pop-color,20%);
 		}
 	}
 
@@ -181,6 +194,7 @@ img {
 		margin-top: 0;
 		margin-bottom: 2em;
 	}
+
 }
 
 .filter-nav {
@@ -257,6 +271,36 @@ img {
 
 	}
 
+
+
+	.klapp-toggle {
+		position: absolute;
+		right: 0;
+		top: -40px;
+		width: 35px;
+		height: 35px;
+		text-align: center;
+		line-height: 35px;
+		z-index: 99999;
+		color: white;
+		background: $header-color;
+		border: 1px solid lighten($header-color, 10%);
+		@include border-radius(3px);
+		display: none;
+
+		@include at-breakpoint($smalltablet) {
+			display: block;
+		}
+
+		&.hide {
+			display: none;
+		}
+
+		&:hover {
+			background: lighten($header-color,5%);
+		}
+	}
+
 }
 
 
@@ -269,45 +313,7 @@ img {
 
 }
 
-/*
-.tinynav_label {
-	color: $text-color-invert;
-	line-height: 3em;
-	padding-right: .5em;
-	letter-spacing: 1pt;
-	font-size: .875em;
 
-	@include at-breakpoint($smalltablet) {
-		display: none;
-	}
-}
-
-.tinynav {
-	display: inline;
-	width: 5em;
-	height: 24px;
-	background-color: #f0f0f0;
-	@include border-radius(3px);
-	border: 1px solid darken(white,12%);
-	padding: 0 .5em;
-	font-size: .875em;
-	-webkit-appearance: none;
-	position: relative;
-
-	@include at-breakpoint($smalltablet) {
-		display: none;
-	}
-
-	&:after {
-		content: '&#61703';
-		position: absolute;
-		top: 0;
-		right: 0;
-		font-family: $symbol-family;
-	}
-
-}
-*/
 
 .year-select {
 	padding-top: 24px;
@@ -323,32 +329,12 @@ img {
 	@include span-columns(3 omega,12);
 	margin-top: 24px;
 	position: relative;
-	background: $pop-color;
-	@include border-radius(2px);
-	@include box-shadow(0 3px 0 $dark-pop-color inset);
 	height: 40px;
 	margin-right: 2px;
 	display: none;
 
 	@include at-breakpoint($smalltablet) {
 		display: block;
-	}
-
-	label {
-		@extend .tinynav_label;
-
-
-		@include at-breakpoint($smalltablet) {
-			display: inline;
-		}
-	}
-
-	&:after {
-		content: '\f0dd';
-		position: absolute;
-		top: 0;
-		right: 10px;
-		font-family: $symbol-family;
 	}
 
 }
@@ -363,8 +349,45 @@ img {
 	-webkit-appearance: none;
 	line-height: 40px;
 	padding: 0 15px;
+	z-index: 9998;
+	position: relative;
+	@include drop-shadow-inset($dark-pop-color);
+
+	a {
+		text-align: left;
+		padding-left: 20px;
+	}
+
+
+	li {
+		float: none !important;
+		width: 100%;
+		}
 }
 
+ul.trends-list.ausgeklappt {
+	height: auto !important;
+}
+
+.trends-list-toggle {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 9999;
+	width: 25px;
+	height: 25px;
+	margin: 5px;
+	@include drop-shadow($dark-pop-color);
+	display: block;
+	text-align: center;
+	background: darken($pop-color,3%);
+	line-height: 30px;
+	@include border-radius(3px);
+
+	i {
+		color: $dark-pop-color;
+	}
+}
 
 .mobile-toggle {
 	background: white;
@@ -476,117 +499,11 @@ img {
 	}
 }
 
-.year-2012 {
-	background: url(../img/bg-2012.jpg);
 
+@import "start";
+@import "2012";
+@import "glossar";
 
-	&:after {
-		content: '';
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		@include background-image(radial-gradient(rgba(125,126,125,0) 0%,rgba(73,73,73,0) 47%,rgba(14,14,14,1) 100%));
-		z-index: 990;
-		top: 0;
-		left: 0;
-	}
-
-}
-
-
-.intro .eingeklappt {
-	.year-intro {
-		.klapp-toggle {
-			display: none;
-		}
-	}
-}
-
-
-.year-intro {
-	@include container($total-columns, $landscape, $smalltablet, $tablet, $desktop, $bigdesktop);
-	padding: 35px 20px;
-	position: relative;
-	z-index: 999;
-
-	@include at-breakpoint($smalltablet) {
-		padding: 55px 0;
-	}
-
-
-
-	.klapp-toggle {
-		position: absolute;
-		right: 0;
-		bottom: -10px;
-		width: 35px;
-		height: 35px;
-		text-align: center;
-		line-height: 35px;
-		z-index: 99999;
-		color: white;
-		background: $header-color;
-		border: 1px solid lighten($header-color, 10%);
-		@include border-radius(3px);
-
-		display: none;
-		@include at-breakpoint($smalltablet) {
-			display: block;
-		}
-	}
-
-
-	.filler {
-		@include span-columns(3,12);
-		@include opacity(0);
-	}
-
-	article {
-		@include span-columns(12,12);
-		padding: 35px 20px 20px;
-		background: white;
-		margin-bottom: 20px;
-
-		@include at-breakpoint($smalltablet) {
-			@include span-columns(6,12);
-			margin-bottom: 0;
-		}
-	}
-
-	aside {
-		@include span-columns(12,12);
-		padding: 35px 20px 20px;
-		background: white;
-		display: none;
-
-		@include at-breakpoint($smalltablet) {
-			display: block;
-			@include span-columns(3 omega,12);
-		}
-
-		ul {
-			@extend %horizontal-list;
-		}
-
-		li {
-			margin-right: 10px;
-			line-height: 1.5625em;
-		}
-
-		a {
-			text-decoration: underline;
-		}
-	}
-
-	h1, h2 {
-		font-size: 2.25em;
-		margin-bottom: 1.3333em;
-		line-height: 20px;
-	}
-
-	p {
-		line-height: 1.5625em;
-		margin-bottom: 0;
-	}
-}
+@import "footer";
+@import "animate";
 
