@@ -27,13 +27,17 @@
 .back-year {
 	position: absolute;
 	top: 75px;
-	right: 0;
+	right: 10px;
+	display: none;
 
 	&:hover {
 		color: black;
 		text-decoration: underline;
 	}
 
+	@include at-breakpoint($smalltablet) {
+		display: inline-block;
+	}
 }
 
 .glossar-container {
@@ -132,3 +136,4 @@
 	}
 
 }
+

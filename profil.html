@@ -6,7 +6,7 @@
 <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Wilkommen - evoluzzr.de</title>
+    <title>Max Mustermann's Profil - evoluzzr.de</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/introjs.min.css">
     <script src="js/vendor/modernizr.custom.js"></script>
 </head>
-<body>
+<body class="profil-body">
 	<section class="full head">
 		<header class="main-header">
 			<div class="logo">
@@ -48,45 +48,61 @@
 			</div>
 		</header>
 	</section>
-	<section class="full startpage intro">
+	<section class="full profilpage intro">
 			<div class="year-intro">
-				<h1>Teile deine Arbeiten und erlebe </br>die Evolution des Webdesign!</h1>
-
-				<a class="tour-link" id="startButton"><i class="icon-bolt"></i>Sieh, was evoluzzr zu bieten hat</a>
-				<a class="register-link"><i class="icon-group"></i>Werde Teil der Community</a>
+				<div class="title-leiste">
+					<h1>Max Mustermann</h1>
+					<span>Artdirector bei <b>Scholz & Friends</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<i class="icon-map-marker"></i>Berlin</span>
+					<a href="2012.html" class="back-year">zur Jahresauswahl</a>
+				</div>
+				<div class="contact-info">
+					<div class="contact-field">
+						<img src="img/avatar/mustermann.jpg">
+					</div>
+					<div class="contact-field">
+						<h3>Über mich</h3>
+						<p>Ich designe und entwickle Webseiten und mobile Apps.
+							 <br>Sitze ich nicht gerade am Rechner,
+							dann liebe ich es mit meinem Hund Sparky spazieren zu gehen. </p>
+					</div>
+					<div class="contact-field">
+						<h3>Kontakt</h3>
+						<ul>
+							<li><a href="#"><i class="icon-globe"></i>www.mustermann.de</a></li>
+							<li><a href="#"><i class="icon-envelope-alt"></i>info@mustermann.de</a></li>
+							<li><a href="#"><i class="icon-twitter"></i>@mmustermann.de</a></li>
+						</ul>
+					</div>
+					<div class="contact-field">
+						<h3>Aktvitäten</h3>
+						<ul>
+							<li><a href="#"><i class="icon-heart"></i>247</a></li>
+							<li><a href="#"><i class="icon-comments"></i>53 auf 12 Seiten</a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 	</section>
-	<div class="full filter-bar">
 
-		<nav class="filter-nav">
-			<a href="#" class="klapp-toggle"><i class="icon-double-angle-up"></i></a>
-			<div class="year-select" data-step="1" data-intro="Wähle das Jahr zu dem du hochgeladene Webseiten sehen willst.">
-				<ul id="filter-nav">
-					<li><a href="1993.html">1993</a></li>
-					<li><a href="1996.html">1996</a></li>
-					<li><a href="2000.html">2000</a></li>
-					<li><a href="2003.html">2003</a></li>
-					<li><a href="2006.html">2006</a></li>
-					<li><a href="2009.html">2009</a></li>
-					<li><a href="2012.html">2012</a></li>
-					<li><a href="2013.html">2013</a></li>
-				</ul>
-			</div>
-			<div class="trends-select ausgeklappt">
-				<h3 class="right">Aktuelle Uploads</h3>
-			</div>
-			<a id="left-menu" href="#left-menu" class="mobile-toggle year-toggle"><i class="icon-double-angle-left"></i>Jahre</a>
-		</nav>
-	</div>
-			<div class="main">
-				<ul id="og-grid" class="og-grid" data-step="2" data-intro="Sieh dir aktuelle Uploads von anderen Community-Mitgliedern an." data-position="top">
-					<li class="mix skeuo">
+	<section class="full">
+		<div class="container">
+			<h2>Webseiten von Max Mustermann</h2>
+		</div>
+
+	</section>
+
+	<div class="main">
+		<ul id="og-grid" class="og-grid">
+							<li class="mix skeuo">
 						<a 	href="http://thomas.do/"
 							data-largesrc="img/1.jpg"
 							data-title="thomas.do"
 							data-year="2012"
 							data-description="Skeuomorphismus"
-							data-uploader="Hochgeladen von: Max Mustermann">
+							data-uploader="Max Mustermann"
+							data-comments="13"
+							data-likes="05">
 							<img src="img/thumbs/1.jpg" alt="img01"/>
 						</a>
 					     <div class="thumb-data">
@@ -108,7 +124,9 @@
 							data-title="testflightapp.com"
 							data-year="2012"
 							data-description="Skeuomorphismus"
-							data-uploader="Hochgeladen von: Max Mustermann">
+							data-uploader="Max Mustermann"
+							data-comments="13"
+							data-likes="05">
 							<img src="img/thumbs/2.jpg" alt="img02"/>
 						</a>
 					     <div class="thumb-data">
@@ -130,7 +148,9 @@
 							data-title="tomorrow.do"
 							data-year="2012"
 							data-description="Skeuomorphismus"
-							data-uploader="Hochgeladen von: Max Mustermann">
+							data-uploader="Max Mustermann"
+							data-comments="13"
+							data-likes="05">
 							<img src="img/thumbs/3.jpg" alt="img03"/>
 						</a>
 					     <div class="thumb-data">
@@ -152,7 +172,9 @@
 							data-title="iconeden.com/blog/"
 							data-year="2012"
 							data-description="Skeuomorphismus"
-							data-uploader="Hochgeladen von: Max Mustermann">
+							data-uploader="Max Mustermann"
+							data-comments="13"
+							data-likes="05">
 							<img src="img/thumbs/4.jpg" alt="img04"/>
 						</a>
 					     <div class="thumb-data">
@@ -174,7 +196,9 @@
 							data-title="sickdesigner.com"
 							data-year="2012"
 							data-description="Skeuomorphismus"
-							data-uploader="Hochgeladen von: Max Mustermann">
+							data-uploader="Max Mustermann"
+							data-comments="13"
+							data-likes="05">
 							<img src="img/thumbs/5.jpg" alt="img02"/>
 						</a>
 					     <div class="thumb-data">
@@ -196,7 +220,9 @@
 							data-title="oatiful.ie"
 							data-year="2012"
 							data-description="Skeuomorphismus"
-							data-uploader="Hochgeladen von: Max Mustermann">
+							data-uploader="Max Mustermann"
+							data-comments="13"
+							data-likes="05">
 							<img src="img/thumbs/6.jpg" alt="img03"/>
 						</a>
 					     <div class="thumb-data">
@@ -212,17 +238,80 @@
 							</div>
 						</div>
 					</li>
-					<li class="mix skeuo">
-						<a 	href="http://www.bucketlistly.com/"
-							data-largesrc="img/7.jpg"
-							data-title="bucketlistly.com"
+		</ul>
+	</div>
+
+
+	<section class="full">
+		<div class="container">
+			<h2>Weitere Uploads</h2>
+		</div>
+
+	</section>
+
+	<div class="main">
+		<ul id="og-grid2" class="og-grid">
+							<li class="mix skeuo">
+						<a 	href="http://thomas.do/"
+							data-largesrc="img/1.jpg"
+							data-title="thomas.do"
 							data-year="2012"
 							data-description="Skeuomorphismus"
-							data-uploader="Hochgeladen von: Max Mustermann">
-							<img src="img/thumbs/7.jpg" alt="img01"/>
+							data-uploader="Max Mustermann"
+							data-comments="13"
+							data-likes="05">
+							<img src="img/thumbs/1.jpg" alt="img01"/>
 						</a>
 					     <div class="thumb-data">
-							<span>bucketlistly.com</span>
+							<span>thomas.do</span>
+							<div class="thumb-meta">
+								<span>Skeuomorphismus</span>
+								<div class="box-heart">
+									<i class="icon-heart"></i><span data-draft-number="2"></span>
+								</div>
+								<div class="box-comment">
+								 	<i class="icon-comment"></i><span data-draft-number="2"></span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="mix lines">
+						<a 	href="https://testflightapp.com/"
+							data-largesrc="img/2.jpg"
+							data-title="testflightapp.com"
+							data-year="2012"
+							data-description="Skeuomorphismus"
+							data-uploader="Max Mustermann"
+							data-comments="13"
+							data-likes="05">
+							<img src="img/thumbs/2.jpg" alt="img02"/>
+						</a>
+					     <div class="thumb-data">
+							<span>testflightapp.com</span>
+							<div class="thumb-meta">
+								<span>Skeuomorphismus</span>
+								<div class="box-heart">
+									<i class="icon-heart"></i><span data-draft-number="2"></span>
+								</div>
+								<div class="box-comment">
+								 	<i class="icon-comment"></i><span data-draft-number="2"></span>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="mix lines">
+					<a 	href="http://tomorrow.do/"
+							data-largesrc="img/3.jpg"
+							data-title="tomorrow.do"
+							data-year="2012"
+							data-description="Skeuomorphismus"
+							data-uploader="Max Mustermann"
+							data-comments="13"
+							data-likes="05">
+							<img src="img/thumbs/3.jpg" alt="img03"/>
+						</a>
+					     <div class="thumb-data">
+							<span>tomorrow.do</span>
 							<div class="thumb-meta">
 								<span>Skeuomorphismus</span>
 								<div class="box-heart">
@@ -235,38 +324,18 @@
 						</div>
 					</li>
 					<li class="mix skeuo">
-						<a 	href="http://www.lamaddalena.pl/"
-							data-largesrc="img/8.jpg"
-							data-title="lamaddalena.pl"
+						<a 	href="http://www.iconeden.com/blog/"
+							data-largesrc="img/4.jpg"
+							data-title="iconeden.com/blog/"
 							data-year="2012"
 							data-description="Skeuomorphismus"
-							data-uploader="Hochgeladen von: Max Mustermann">
-							<img src="img/thumbs/8.jpg" alt="img02"/>
+							data-uploader="Max Mustermann"
+							data-comments="13"
+							data-likes="05">
+							<img src="img/thumbs/4.jpg" alt="img04"/>
 						</a>
 					     <div class="thumb-data">
-							<span>lamaddalena.pl</span>
-							<div class="thumb-meta">
-								<span>Skeuomorphismus</span>
-								<div class="box-heart">
-									<i class="icon-heart"></i><span data-draft-number="2"></span>
-								</div>
-								<div class="box-comment">
-								 	<i class="icon-comment"></i><span data-draft-number="2"></span>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="mix skeuo">
-					<a 	href="http://www.gnosh.co.uk/"
-							data-largesrc="img/9.jpg"
-							data-title="gnosh.co.uk"
-							data-year="2012"
-							data-description="Skeuomorphismus"
-							data-uploader="Hochgeladen von: Max Mustermann">
-							<img src="img/thumbs/9.jpg" alt="img03"/>
-						</a>
-					     <div class="thumb-data">
-							<span>gnosh.co.uk</span>
+							<span>iconeden.com/blog/</span>
 							<div class="thumb-meta">
 								<span>Skeuomorphismus</span>
 								<div class="box-heart">
@@ -284,7 +353,9 @@
 							data-title="sickdesigner.com"
 							data-year="2012"
 							data-description="Skeuomorphismus"
-							data-uploader="Hochgeladen von: Max Mustermann">
+							data-uploader="Max Mustermann"
+							data-comments="13"
+							data-likes="05">
 							<img src="img/thumbs/5.jpg" alt="img02"/>
 						</a>
 					     <div class="thumb-data">
@@ -306,7 +377,9 @@
 							data-title="oatiful.ie"
 							data-year="2012"
 							data-description="Skeuomorphismus"
-							data-uploader="Hochgeladen von: Max Mustermann">
+							data-uploader="Max Mustermann"
+							data-comments="13"
+							data-likes="05">
 							<img src="img/thumbs/6.jpg" alt="img03"/>
 						</a>
 					     <div class="thumb-data">
@@ -322,75 +395,8 @@
 							</div>
 						</div>
 					</li>
-					<li class="mix skeuo">
-						<a 	href="http://www.bucketlistly.com/"
-							data-largesrc="img/7.jpg"
-							data-title="bucketlistly.com"
-							data-year="2012"
-							data-description="Skeuomorphismus"
-							data-uploader="Hochgeladen von: Max Mustermann">
-							<img src="img/thumbs/7.jpg" alt="img01"/>
-						</a>
-					     <div class="thumb-data">
-							<span>bucketlistly.com</span>
-							<div class="thumb-meta">
-								<span>Skeuomorphismus</span>
-								<div class="box-heart">
-									<i class="icon-heart"></i><span data-draft-number="2"></span>
-								</div>
-								<div class="box-comment">
-								 	<i class="icon-comment"></i><span data-draft-number="2"></span>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="mix skeuo">
-						<a 	href="http://www.lamaddalena.pl/"
-							data-largesrc="img/8.jpg"
-							data-title="lamaddalena.pl"
-							data-year="2012"
-							data-description="Skeuomorphismus"
-							data-uploader="Hochgeladen von: Max Mustermann">
-							<img src="img/thumbs/8.jpg" alt="img02"/>
-						</a>
-					     <div class="thumb-data">
-							<span>lamaddalena.pl</span>
-							<div class="thumb-meta">
-								<span>Skeuomorphismus</span>
-								<div class="box-heart">
-									<i class="icon-heart"></i><span data-draft-number="2"></span>
-								</div>
-								<div class="box-comment">
-								 	<i class="icon-comment"></i><span data-draft-number="2"></span>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="mix skeuo">
-					<a 	href="http://www.gnosh.co.uk/"
-							data-largesrc="img/9.jpg"
-							data-title="gnosh.co.uk"
-							data-year="2012"
-							data-description="Skeuomorphismus"
-							data-uploader="Hochgeladen von: Max Mustermann">
-							<img src="img/thumbs/9.jpg" alt="img03"/>
-						</a>
-					     <div class="thumb-data">
-							<span>gnosh.co.uk</span>
-							<div class="thumb-meta">
-								<span>Skeuomorphismus</span>
-								<div class="box-heart">
-									<i class="icon-heart"></i><span data-draft-number="2"></span>
-								</div>
-								<div class="box-comment">
-								 	<i class="icon-comment"></i><span data-draft-number="2"></span>
-								</div>
-							</div>
-						</div>
-					</li>
-
-				</ul>
-			</div>
+		</ul>
+	</div>
 
 
 	<section class="full secondary-footer">

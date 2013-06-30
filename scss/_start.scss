@@ -26,7 +26,7 @@
 	@include border-radius(3px);
 	display: block;
 	background: $background-color;
-	@include span-columns(3,12);
+	@include span-columns(6,12);
 	height: 60px;
 	line-height: 60px;
 	text-align: center;
@@ -35,6 +35,10 @@
 	i {
 		margin-right: 5px;
 	}
+
+	@include at-breakpoint($smalltablet) {
+		@include span-columns(3,12);
+	}
 }
 
 .register-link {
@@ -42,7 +46,7 @@
 	@include border-radius(3px);
 	display: block;
 	background: $alpha-color;
-	@include span-columns(3 omega,12);
+	@include span-columns(6 omega,12);
 	height: 60px;
 	line-height: 60px;
 	text-align: center;
@@ -50,5 +54,9 @@
 
 	i {
 		margin-right: 5px;
+	}
+
+	@include at-breakpoint($smalltablet) {
+		@include span-columns(3 omega,12);
 	}
 }

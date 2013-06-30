@@ -1,5 +1,5 @@
 $(function() {
-    var e = $("a.klapp-toggle"), t = $(".intro"), n = $(".to-top"), r = $("body,html"), i = $(".transition"), s = $(".trends-list-toggle"), o = $(".trends-list"), u = $(".scroll");
+    var e = $("a.klapp-toggle"), t = $(".intro"), n = $(".to-top"), r = $(".menu-toggle"), i = $("body,html"), s = $(".transition"), o = $(".trends-list-toggle"), u = $(".trends-list"), a = $(".scroll"), f = $("section.head");
     $(window).roughDraft({
         author: "bacon",
         illustrator: "placehold",
@@ -21,13 +21,17 @@ $(function() {
         }
     });
     Grid.init();
-    s.on("click", function(e) {
-        o.toggleClass("ausgeklappt");
+    o.on("click", function(e) {
+        u.toggleClass("ausgeklappt");
         return !1;
     });
     e.on("click", function(n) {
         t.toggleClass("eingeklappt");
         e.toggleClass("hide");
+        return !1;
+    });
+    r.on("click", function(e) {
+        f.toggleClass("ausgeklappt");
         return !1;
     });
     $("#left-menu").sidr({
@@ -40,7 +44,7 @@ $(function() {
     });
     $("#og-grid").mixitup();
     n.on("click", function(e) {
-        r.animate({
+        i.animate({
             scrollTop: 0
         }, 400);
         return !1;
@@ -54,10 +58,10 @@ $(function() {
             });
         });
     };
-    i.leavePage();
-    u.click(function(e) {
+    s.leavePage();
+    a.click(function(e) {
         e.preventDefault();
-        r.animate({
+        i.animate({
             scrollTop: $(this.hash).offset().top
         }, 500);
     });

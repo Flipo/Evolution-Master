@@ -21,8 +21,15 @@
 	position: relative;
 	z-index: 999;
 
+	@include at-breakpoint($landscape) {
+		padding: 55px 0.625em;
+		width: 100%;
+		max-width: 100%;
+	}
+
 	@include at-breakpoint($smalltablet) {
-		padding: 55px 0;
+		padding: 55px 0.625em;
+		max-width: 72em;
 	}
 
 

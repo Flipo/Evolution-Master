@@ -6,7 +6,7 @@
 <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Login - evoluzzr.de</title>
+    <title>upload - evoluzzr.de</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/global.css">
     <script src="js/vendor/modernizr.custom.js"></script>
 </head>
-<body class="login-body">
+<body class="upload-body">
 	<section class="full head">
 		<header class="main-header">
 			<div class="logo">
@@ -30,16 +30,22 @@
 			<div class="top-menu">
 				<ul>
 					<li>
-						<a href="#"><i class="icon-edit"></i>Registrieren</a>
+						<a href="upload.html"><i class="icon-upload-alt"></i>Upload</a>
 					</li>
 					<li>
-						<a href="login.html"><i class="icon-signin"></i>Login</a>
+						<a href="profil2.html"><i class="icon-user"></i>Mein Profil</a>
 					</li>
 					<li>
+						<a href="#"><i class="icon-wrench"></i>Account</a>
+					</li>
+					<li>
+						<a href="login.html"><i class="icon-signout"></i>Logout</a>
+					</li>
+					<li class="hide-mobile">
 						<input type="search" placeholder="Suche">
 						<a href="#" class="search-link"><i class="icon-search"></i></a>
 					</li>
-					<li>
+					<li class="hide-mobile">
 						<a href="#" class="klapp-toggle"><i class="icon-double-angle-down"></i></a>
 					</li>
 				</ul>
@@ -50,33 +56,69 @@
 
 	<section class="full login">
 		<div class="container">
-			<div class="login-box">
-				<div class="login-title">
-					<h1>Login</h1>
+			<div class="upload-box">
+				<div class="upload-title">
+					<h1>Upload</h1>
 					<a><i class="icon-double-angle-left"></i>zur Jahresauswahl</a>
 				</div>
-			    <div id='login_container'>
-			        <div id='login_box'>
-			            <div id='img_box'>
-			            	<img src='img/avatar/default.jpg' class='avatar_img'/>
-			            </div>
-			            <form method='post' action=''>
-
-			                <input type='text' id='username'  class='input user'/> <br/>
-			                <input type='password' id='password' class='input passcode'/> <br/>
-
-							<a href="dashboard.html"><i class="icon-signin"></i>Login</a>
-			            </form>
-			        </div>
-			    </div>
+				<div>
+					<form id="my-awesome-dropzone" action="/target" class="dropzone"></form>
+				<div>
+				<section class="upload-detail">
+					<div class="upload-text">
+						<label>URL der Webseite:</label>
+						<span>Wie ist die Adresse der Webseite?</span>
+					</div>
+					<div class="upload-input">
+						<input type="url">
+					</div>
+				</section>
+				<section class="upload-detail">
+					<div class="upload-text">
+						<label>Erscheinungsjahr:</label>
+						<span>Wann ging das Design der Seite online?</span>
+					</div>
+					<div class="upload-input">
+						<select>
+							<option>1993</option>
+							<option>1996</option>
+							<option>2000</option>
+							<option>2003</option>
+							<option>2006</option>
+							<option>2009</option>
+							<option>2012</option>
+							<option>2013</option>
+						</select>
+					</div>
+				</section>
+				<section class="upload-detail">
+					<div class="upload-text">
+						<label>Webdesigntrend:</label>
+						<span>Welcher Gestaltungstrend wird genutzt?</span>
+					</div>
+					<div class="upload-input">
+						<select>
+							<option>Trend wählen</option>
+							<option>Flat Design</option>
+							<option>Großes Hintergrundfoto</option>
+							<option>Pastelfarben</option>
+						</select>
+					</div>
+				</section>
+				<section class="upload-detail">
+					<div class="upload-text">
+						<label>Webdesigner:</label>
+						<span>Wer hat die Webseite gestaltet?</span>
+					</div>
+					<div class="upload-input">
+						<input type="checkbox"><label>Ich</label>
+						<input type="checkbox"><label>jemand anderes</label>
+					</div>
+				</section>
+				<a href="2013-2.html" class="upload-button">
+					<i class="icon-upload-alt"></i>Screenshot hochladen
+				</a>
 			</div>
-			    <div class="twitter-login">
-					<a><i class="icon-twitter"></i>Mit Twitter - Account anmelden</a>
-			    </div>
-			    <div class="facebook-login">
-					<a><i class="icon-facebook"></i>Mit Facebook - Account anmelden</a>
-			    </div>
-		</div>
 	</section>
 
 	<section class="full secondary-footer">
@@ -138,31 +180,14 @@
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
 		<script src="js/plugins-ck.js"></script>
 		<script src="js/vendor/grid.js"></script>
+		<script src="js/vendor/dropzone.min.js"></script>
 		<script src="js/main-ck.js"></script>
-	    <script type="text/javascript">
-			$(document).ready(function()
-			{
-			$("#username").focus();
-			$(".user").keyup(function()
-			{
-			var email=$(this).val();
-			var dataString = 'email='+ email ;
-			var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-
-			if(ck_email.test(email))
-			{
-			$.ajax({
-			success: function(html)
-			{
-
-			$("#img_box").html("<img src='img/avatar/me.jpg' class='avatar_img' />");}});
-
-			}
-
-
-			});
-
-			});
-	    </script>
+		<script>
+			Dropzone.options.myAwesomeDropzone = {
+			  dictDefaultMessage: "Bild hier hinein ziehen oder klicken",
+			  thumbnailWidth: 240,
+			  thumbnailHeight: 180
+			};
+		</script>
 	</body>
 </html>

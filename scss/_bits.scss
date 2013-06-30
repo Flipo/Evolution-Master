@@ -115,3 +115,11 @@ $bigdesktop        	: 78em 12;
 	@extend %right;
 }
 
+
+.hide-mobile {
+	display: none;
+
+	@include at-breakpoint($smalltablet) {
+		display: inline;
+	}
+}

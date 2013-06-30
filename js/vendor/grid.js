@@ -325,10 +325,10 @@ var Grid = (function() {
 		create : function() {
 			// create Preview structure:
 			this.$title = $( '<h3></h3>' );
-			this.$description = $( '<a href="#"></a>' );
+			this.$description = $( '<a href="glossar.html"></a>' );
 			this.$descripted = $( '<div class="detail-item"><i class="icon-tag"></i></div>' ).append( this.$description );
 			this.$year = $( '<span></span>' );
-			this.$uploader = $( '<a href="#"></a>' );
+			this.$uploader = $( '<a href="profil.html"></a>' );
 			this.$uploaded = $( '<div class="detail-item"><i class="icon-upload-alt"></i></div>' ).append( this.$uploader );
 			this.$comments = $( '<span></span>' );
 			this.$commented = $( '<div class="detail-item"><i class="icon-comments"></i></div>' ).append( this.$comments );

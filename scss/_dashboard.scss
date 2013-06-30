@@ -1,0 +1,26 @@
+.dashboard {
+	.container {
+		@include at-breakpoint($smalltablet) {
+			padding: 0 0.625em;
+		}
+
+		@include at-breakpoint($bigdesktop) {
+			padding: 0;
+			max-width: 72em;
+		}
+
+		h1 {
+			margin-top: 1em;
+			margin-bottom: 1em;
+		}
+
+		h3 {
+			font-size: 1em;
+			margin-bottom: 0;
+
+			@include at-breakpoint($smalltablet) {
+				font-size: 1.5em;
+			}
+		}
+	}
+}

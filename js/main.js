@@ -2,11 +2,13 @@ $(function(){
   var klapp = $("a.klapp-toggle");
   var intro = $(".intro");
   var scrollTop = $(".to-top");
+  var menu = $(".menu-toggle");
   var body = $('body,html');
   var transition = $('.transition');
   var trends = $('.trends-list-toggle');
   var trendselect = $('.trends-list');
   var scroll = $(".scroll");
+  var head = $("section.head");
 
   $(window).roughDraft({
 	  author      : 'bacon',
@@ -42,6 +44,11 @@ $(function(){
 	  return false;
 	});
 
+	menu.on("click", function(e){
+	  head.toggleClass('ausgeklappt');
+	  return false;
+	});
+
 	 $('#left-menu').sidr({
 		 name: 'sidr-left',
 		 side: 'left' // By default
@@ -58,8 +65,6 @@ $(function(){
 	  body.animate({ scrollTop: 0 }, 400);
 	  return false;
 	});
-
-
 
 
 	/*
