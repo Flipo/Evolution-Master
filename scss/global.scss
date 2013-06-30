@@ -15,6 +15,10 @@
 .wrapper {
 	@include susy-grid-background; }
 
+html, body {
+	height: 100%;
+}
+
 html {
 	background: $header-color;
 }
@@ -505,5 +509,6 @@ ul.trends-list.ausgeklappt {
 @import "glossar";
 
 @import "footer";
+@import "login";
 @import "animate";
 

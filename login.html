@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Login - evoluzzr.de</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/global.css">
+    <script src="js/vendor/modernizr.custom.js"></script>
+</head>
+<body class="login-body">
+	<section class="full head">
+		<header class="main-header">
+			<div class="logo">
+				<a href="index.html" class="transition"><img src="img/logo.svg" /></a>
+				<p>Evolution des Webdesign</p>
+			</div>
+			<div class="top-menu">
+				<ul>
+					<li>
+						<a href="#"><i class="icon-edit"></i>Registrieren</a>
+					</li>
+					<li>
+						<a href="login.html"><i class="icon-signin"></i>Login</a>
+					</li>
+					<li>
+						<input type="search" placeholder="Suche">
+						<a href="#" class="search-link"><i class="icon-search"></i></a>
+					</li>
+					<li>
+						<a href="#" class="klapp-toggle"><i class="icon-double-angle-down"></i></a>
+					</li>
+				</ul>
+
+			</div>
+		</header>
+	</section>
+
+	<section class="full login">
+		<div class="container">
+			<div class="login-box">
+				<div class="login-title">
+					<h1>Login</h1>
+					<a><i class="icon-double-angle-left"></i>zur Jahresauswahl</a>
+				</div>
+			    <div id='login_container'>
+			        <div id='login_box'>
+			            <div id='img_box'>
+			            	<img src='img/avatar/default.jpg' class='avatar_img'/>
+			            </div>
+			            <form method='post' action=''>
+
+			                <input type='text' id='username'  class='input user'/> <br/>
+			                <input type='password' id='password' class='input passcode'/> <br/>
+
+							<a href="dashboard.html"><i class="icon-signin"></i>Login</a>
+			            </form>
+			        </div>
+			    </div>
+			</div>
+			    <div class="twitter-login">
+					<a><i class="icon-twitter"></i>Mit Twitter - Account anmelden</a>
+			    </div>
+			    <div class="facebook-login">
+					<a><i class="icon-facebook"></i>Mit Facebook - Account anmelden</a>
+			    </div>
+		</div>
+	</section>
+
+	<section class="full secondary-footer">
+		<div class="container">
+			<nav>
+				<li><a href="index.html">Start</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="blog.html">Blog</a></li>
+			</nav>
+			<a class="to-top">
+				<i class="icon-angle-up"></i>Nach Oben
+			</a>
+		</div>
+	</section>
+	<section class="full meta-footer">
+		<div class="container">
+			<p>&copy; 2013 evoluzzr - Evolution des Webdesign</p>
+			<nav>
+				<li class="share-devider"><a href="#"><i class="icon-twitter-sign"></i></a></li>
+				<li class="share-devider"><a href="#"><i class="icon-google-plus-sign"></i></a></li>
+				<li class="share-devider"><a href="#"><i class="icon-facebook-sign"></i></a></li>
+				<li class="devider">Teilen</li>
+				<li class="devider"><a href="#">Impressum</a></li>
+				<li class="devider"><a href="#">Datenschutzerklärung</a></li>
+			</nav>
+		</div>
+
+	</section>
+
+		<div id="sidr-left" class="sidr left">
+			<ul>
+				<li><a href="1993.html">1993</a></li>
+				<li><a href="1996.html">1996</a></li>
+				<li><a href="2000.html">2000</a></li>
+				<li><a href="2003.html">2003</a></li>
+				<li><a href="2006.html">2006</a></li>
+				<li><a href="2009.html">2009</a></li>
+				<li class="active"><a href="2012.html">2012</a></li>
+				<li><a href="2013.html">2013</a></li>
+			</ul>
+		</div>
+
+		<div id="sidr-right" class="sidr right">
+			<ul>
+				<li><a href="#">Alle Trends</a></li>
+				<li><a href="#">Kreise</a></li>
+				<li><a href="#">Grid Layouts</a></li>
+				<li><a href="#">Icons</a></li>
+				<li><a href="#">Letterpress / Schleifen</a></li>
+				<li><a href="#">Retro</a></li>
+				<li><a href="#">Condensed Schriften</a></li>
+				<li><a href="#">Skeuomorphismus</a></li>
+				<li><a href="#">Diagonale Linien</a></li>
+			</ul>
+		</div>
+
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+		<script src="js/plugins-ck.js"></script>
+		<script src="js/vendor/grid.js"></script>
+		<script src="js/main-ck.js"></script>
+	    <script type="text/javascript">
+			$(document).ready(function()
+			{
+			$("#username").focus();
+			$(".user").keyup(function()
+			{
+			var email=$(this).val();
+			var dataString = 'email='+ email ;
+			var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+
+			if(ck_email.test(email))
+			{
+			$.ajax({
+			success: function(html)
+			{
+
+			$("#img_box").html("<img src='img/avatar/me.jpg' class='avatar_img' />");}});
+
+			}
+
+
+			});
+
+			});
+	    </script>
+	</body>
+</html>

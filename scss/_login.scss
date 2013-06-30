@@ -1,0 +1,139 @@
+.login-body {
+	padding-bottom: 160px;
+}
+
+.login {
+	background: url(../img/bg-login.jpg);
+	min-height: 100%;
+	display: block;
+	min-height: 100%; /* Mindesthöhe für moderne Browser */
+	height:auto !important; /* Important Regel für moderne Browser */
+	height:100%; /* Mindesthöhe für den IE */
+	overflow: hidden !important; /* FF Scroll-leiste */
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		@include background-image(radial-gradient(rgba(100,100,100,0) 0%,rgba(40,40,40,0) 47%,rgba(14,14,14,1) 100%));
+		z-index: 990;
+		top: 0;
+		left: 0;
+	}
+}
+
+.login-box {
+	width: 50%;
+	margin: 4em auto 2em;
+	overflow: hidden;
+	background: #f2f2f2;
+	position: relative;
+	z-index: 999;
+	@include drop-shadow($dark-pop-color);
+	@include border-radius(3px);
+	padding: 20px;
+
+	h1 {
+		font-size: 2.25em;
+		margin-bottom: -5px;
+		line-height: 1em;
+		display: inline;
+	}
+
+	form {
+		width: 70%;
+		float: left;
+		padding-right: 40px;
+
+
+		a {
+			@include button-shadow($dark-alpha-color);
+			background: $alpha-color;
+			@include border-radius(3px);
+			height: 50px;
+			width: 100%;
+			margin-bottom: 10px;
+			text-align: center;
+			display: block;
+			line-height: 50px;
+
+			i {
+				margin-right: 5px;
+			}
+		}
+
+	}
+
+	input {
+		@include drop-shadow-inset($dark-pop-color);
+		@include border-radius(3px);
+		background: white;
+		border: none;
+		outline: none;
+		height: 50px;
+		width: 100%;
+		margin-bottom: 10px;
+		padding: 10px;
+	}
+
+	#img_box {
+		width: 30%;
+		float: right;
+
+		img {
+			width: 100%;
+			@include border-radius(3px);
+		}
+	}
+
+}
+
+#login_box {
+	@extend %clearfix;
+}
+
+.login-title {
+	border-bottom: 1px solid darken(white,10%);
+	margin-bottom: 20px;
+	width: 100%;
+
+	a {
+		@extend %right;
+		line-height: 2.5em;
+	}
+
+	i {
+		margin-right: 5px;
+	}
+}
+
+.twitter-login, .facebook-login {
+	@extend .login-box;
+	padding: 0;
+	margin: 0 auto 1em;
+
+	a {
+		display: block;
+		text-align: center;
+		width: 100%;
+		height: 100%;
+		color: white;
+		padding: 20px;
+
+		i {
+			margin-right: 5px;
+		}
+	}
+}
+
+.twitter-login {
+	background: #5a9aa8;
+	@include button-shadow(#4b808c);
+}
+
+.facebook-login {
+	background: #0069b4;
+	@include button-shadow(#085388);
+}
