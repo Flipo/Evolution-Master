@@ -98,7 +98,7 @@
 	margin-bottom: 3.5em !important;
 
 	&.ausgeklappt {
-		height: 2680px !important;
+		height: 2350px !important;
 	}
 }
 
@@ -131,7 +131,7 @@
 	@include drop-shadow($dark-pop-color);
 
 	&.ausgeklappt {
-		height: 2400px !important;
+		height: 2080px !important;
 	}
 }
 

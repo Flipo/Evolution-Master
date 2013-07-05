@@ -563,6 +563,17 @@ ul.trends-list.ausgeklappt {
 	}
 }
 
+.grid-pagination {
+
+	.pagination {
+		margin: 5em auto 0;
+	}
+	.pagination-list {
+		margin: 2em auto 4em;
+	}
+
+}
+
 .pagination {
 	margin-top: 5em;
 	overflow: hidden;
@@ -572,6 +583,7 @@ ul.trends-list.ausgeklappt {
 	@extend %horizontal-list;
 	margin-top: 5em;
 	@extend %clearfix;
+	width: 470px;
 
 	li {
 		background: white;

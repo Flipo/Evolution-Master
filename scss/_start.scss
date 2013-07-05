@@ -38,6 +38,7 @@
 
 	@include at-breakpoint($smalltablet) {
 		@include span-columns(3,12);
+		margin-left: 8.333%;
 	}
 }
 
@@ -58,5 +59,6 @@
 
 	@include at-breakpoint($smalltablet) {
 		@include span-columns(3 omega,12);
+		margin-right: 8.333%;
 	}
 }
